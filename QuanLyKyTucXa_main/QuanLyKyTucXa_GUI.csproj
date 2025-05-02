@@ -195,7 +195,9 @@
     <Compile Include="FrmThongKeTienDien.Designer.cs">
       <DependentUpon>FrmThongKeTienDien.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmQuanLySinhVien.cs" />
+    <Compile Include="FrmQuanLySinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmQuanLySinhVien.Designer.cs">
       <DependentUpon>FrmQuanLySinhVien.cs</DependentUpon>
     </Compile>
@@ -451,6 +453,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-menu-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-26 %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -43,12 +43,14 @@ END
 GO
 
 -- 3. Cập nhật sinh viên
+
 CREATE PROCEDURE sp_SuaSinhVien
     @MaSV NVARCHAR(10),
     @HoTen NVARCHAR(50),
     @GioiTinh NVARCHAR(5),
     @NgaySinh DATE,
     @QueQuan NVARCHAR(100),
+    @Email NVARCHAR(100),
     @Khoa NVARCHAR(50),
     @Lop NVARCHAR(50),
     @LoaiUuTien NVARCHAR(50),
@@ -60,6 +62,7 @@ BEGIN
         gioitinh = @GioiTinh,
         ngaysinh = @NgaySinh,
         quequan = @QueQuan,
+        email = @Email,
         khoa = @Khoa,
         lop = @Lop,
         loaiuutien = @LoaiUuTien,

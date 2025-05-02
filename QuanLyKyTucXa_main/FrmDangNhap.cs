@@ -39,8 +39,11 @@ namespace QuanLyKyTucXa_main
             if (nguoiDung != null)
             {
                 this.Hide();
-                FrmMain frmMainMenu = new FrmMain();
-                frmMainMenu.ShowDialog();
+                //FrmMain frmMainMenu = new FrmMain();
+                //frmMainMenu.ShowDialog();
+
+                FrmAdmin frmAdmin = new FrmAdmin();
+                frmAdmin.ShowDialog();
 
                 this.Close();
             }

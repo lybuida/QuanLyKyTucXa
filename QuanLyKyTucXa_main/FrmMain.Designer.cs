@@ -35,6 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnKyLuat = new Guna.UI2.WinForms.Guna2Button();
             this.menuCSVC = new Guna.UI2.WinForms.Guna2Panel();
@@ -52,8 +53,11 @@
             this.btnQuanLyNhanVien = new Guna.UI2.WinForms.Guna2Button();
             this.btnQlNhanSu = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel45 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.timeMenuNhanSu = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelMain = new System.Windows.Forms.Panel();
@@ -61,22 +65,18 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.timeMenuDichVu = new System.Windows.Forms.Timer(this.components);
             this.timeMenuCSVC = new System.Windows.Forms.Timer(this.components);
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnHome = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel_Top.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.menuCSVC.SuspendLayout();
             this.menuDV.SuspendLayout();
             this.menuNhanSu.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2ControlBox3
@@ -146,6 +146,19 @@
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(55, 38);
             this.guna2ControlBox1.TabIndex = 0;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(220)))), ((int)(((byte)(215)))));
+            this.guna2PictureBox3.FillColor = System.Drawing.Color.DimGray;
+            this.guna2PictureBox3.Image = global::QuanLyKyTucXa_main.Properties.Resources.icons8_male_user_30;
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(20, 9);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(38, 45);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 8;
+            this.guna2PictureBox3.TabStop = false;
             // 
             // guna2Panel1
             // 
@@ -427,6 +440,28 @@
             this.guna2Panel3.Size = new System.Drawing.Size(289, 46);
             this.guna2Panel3.TabIndex = 11;
             // 
+            // btnHome
+            // 
+            this.btnHome.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 8);
+            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHome.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(220)))), ((int)(((byte)(215)))));
+            this.btnHome.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.btnHome.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnHome.Image = global::QuanLyKyTucXa_main.Properties.Resources.icons8_home_26__1_;
+            this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnHome.ImageOffset = new System.Drawing.Point(8, 0);
+            this.btnHome.Location = new System.Drawing.Point(0, 0);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(289, 49);
+            this.btnHome.TabIndex = 13;
+            this.btnHome.Text = "Home";
+            this.btnHome.TextOffset = new System.Drawing.Point(8, 0);
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
@@ -450,6 +485,32 @@
             this.guna2HtmlLabel45.Size = new System.Drawing.Size(141, 39);
             this.guna2HtmlLabel45.TabIndex = 7;
             this.guna2HtmlLabel45.Text = "KÝ TÚC XÁ";
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.Gray;
+            this.guna2PictureBox2.Image = global::QuanLyKyTucXa_main.Properties.Resources.icons8_menu_25;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(250, 96);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(36, 28);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 7;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.DimGray;
+            this.guna2PictureBox1.Image = global::QuanLyKyTucXa_main.Properties.Resources.ktx;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(93, 67);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 1;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // timeMenuNhanSu
             // 
@@ -509,67 +570,6 @@
             this.timeMenuCSVC.Interval = 10;
             this.timeMenuCSVC.Tick += new System.EventHandler(this.timeMenuCSVC_Tick);
             // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(220)))), ((int)(((byte)(215)))));
-            this.guna2PictureBox3.FillColor = System.Drawing.Color.DimGray;
-            this.guna2PictureBox3.Image = global::QuanLyKyTucXa_main.Properties.Resources.icons8_male_user_30;
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(20, 9);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(38, 45);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox3.TabIndex = 8;
-            this.guna2PictureBox3.TabStop = false;
-            // 
-            // btnHome
-            // 
-            this.btnHome.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHome.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(220)))), ((int)(((byte)(215)))));
-            this.btnHome.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.btnHome.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Image = global::QuanLyKyTucXa_main.Properties.Resources.icons8_home_26__1_;
-            this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHome.ImageOffset = new System.Drawing.Point(8, 0);
-            this.btnHome.Location = new System.Drawing.Point(0, 0);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(4);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(289, 49);
-            this.btnHome.TabIndex = 13;
-            this.btnHome.Text = "Home";
-            this.btnHome.TextOffset = new System.Drawing.Point(8, 0);
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.guna2PictureBox2.FillColor = System.Drawing.Color.Gray;
-            this.guna2PictureBox2.Image = global::QuanLyKyTucXa_main.Properties.Resources.icons8_menu_25;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(250, 96);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(36, 28);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 7;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.DimGray;
-            this.guna2PictureBox1.Image = global::QuanLyKyTucXa_main.Properties.Resources.ktx;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(93, 67);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 1;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -584,6 +584,7 @@
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.guna2Panel_Top.ResumeLayout(false);
             this.guna2Panel_Top.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.menuCSVC.ResumeLayout(false);
             this.menuDV.ResumeLayout(false);
@@ -591,11 +592,10 @@
             this.guna2Panel3.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

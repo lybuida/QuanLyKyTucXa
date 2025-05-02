@@ -34,6 +34,46 @@ namespace QuanLyKyTucXa_main
             }
         }
 
+
+        private void GBtnThem_Click(object sender, EventArgs e)
+        {
+            FrmThemNhanVien frmThemNhanVien = new FrmThemNhanVien();
+            DialogResult result = frmThemNhanVien.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                LoadNhanViens();
+            }
+        }
+
+        private void GBtnTimkiem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string keyword = txtTimkiem.Text.Trim();
+                bool timTheoMa = rbTktheoma.Checked;
+
+                if (string.IsNullOrEmpty(keyword))
+                {
+                    // Nếu ô tìm kiếm trống, load lại toàn bộ danh sách
+                    dgvNhanvien.DataSource = quanLyNhanVien_BL.LayDanhSachNhanVien();
+                    return;
+                }
+
+                // Gọi BLL để tìm kiếm
+                List<NhanVien> ketQua = quanLyNhanVien_BL.TimKiemNhanVien(keyword, timTheoMa);
+
+                // Hiển thị kết quả lên DataGridView
+                dgvNhanvien.DataSource = ketQua;
+
+                if (ketQua.Count == 0)
+                    MessageBox.Show("Không tìm thấy nhân viên phù hợp!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
+
         private void FrmQuanLyNhanVien_Load(object sender, EventArgs e)
         {
             LoadNhanViens();
@@ -100,45 +140,6 @@ namespace QuanLyKyTucXa_main
                         }
                     }
                 }
-            }
-        }
-
-        private void GBtnThem_Click(object sender, EventArgs e)
-        {
-            FrmThemNhanVien frmThemNhanVien = new FrmThemNhanVien();
-            DialogResult result = frmThemNhanVien.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                LoadNhanViens();
-            }
-        }
-
-        private void GBtnTimkiem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string keyword = txtTimkiem.Text.Trim();
-                bool timTheoMa = rbTktheoma.Checked;
-
-                if (string.IsNullOrEmpty(keyword))
-                {
-                    // Nếu ô tìm kiếm trống, load lại toàn bộ danh sách
-                    dgvNhanvien.DataSource = quanLyNhanVien_BL.LayDanhSachNhanVien();
-                    return;
-                }
-
-                // Gọi BLL để tìm kiếm
-                List<NhanVien> ketQua = quanLyNhanVien_BL.TimKiemNhanVien(keyword, timTheoMa);
-
-                // Hiển thị kết quả lên DataGridView
-                dgvNhanvien.DataSource = ketQua;
-
-                if (ketQua.Count == 0)
-                    MessageBox.Show("Không tìm thấy nhân viên phù hợp!");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi: " + ex.Message);
             }
         }
     }

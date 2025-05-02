@@ -194,5 +194,10 @@ namespace QuanLyKyTucXa_main
         {
 
         }
+
+        private void GBtnDongg_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

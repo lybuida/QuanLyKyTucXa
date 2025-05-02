@@ -8,8 +8,7 @@ namespace QuanLy_Assistant
     {
         private readonly Dictionary<string, string> faqDatabase;
         private readonly BLL_Phong bllPhong = new BLL_Phong();
-        private readonly BLL_SinhVien bllSinhVien = new BLL_SinhVien();
-        // Bạn có thể thêm các BLL khác nếu muốn hỗ trợ thêm thống kê
+        private readonly QuanLySinhVien_BL bllSinhVien = new QuanLySinhVien_BL();
 
         public FAQService()
         {
@@ -48,7 +47,7 @@ namespace QuanLy_Assistant
 
             question = question.ToLower();
 
-            // Ưu tiên kiểm tra các câu hỏi thống kê động
+            // Kiểm tra các câu hỏi thống kê động
             string statisticAnswer = GetStatisticAnswer(question);
             if (!string.IsNullOrEmpty(statisticAnswer))
                 return statisticAnswer;

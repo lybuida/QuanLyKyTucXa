@@ -202,9 +202,9 @@ namespace QuanLy_DAL
 
         public void UpdateTienNuoc(TienNuoc tn)
         {
-            string sql = @"UPDATE TienNuoc SET 
-                           maphong=@maphong, ngaylap=@ngaylap, chisocu=@chisocu, chisomoi=@chisomoi, 
-                           sokhoitieuthu=@sokhoitieuthu, tongtien=@tongtien, trangthai=@trangthai 
+            string sql = @"UPDATE TienNuoc 
+                           SET maphong=@maphong, ngaylap=@ngaylap, chisocu=@chisocu, chisomoi=@chisomoi, 
+                               sokhoitieuthu=@sokhoitieuthu, tongtien=@tongtien, trangthai=@trangthai 
                            WHERE mahoadon=@mahoadon";
             try
             {

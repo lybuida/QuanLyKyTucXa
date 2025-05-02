@@ -29,6 +29,7 @@ namespace QuanLyKyTucXa_main
         private void FrmQuanLyThietBi_Load(object sender, EventArgs e)
         {
             dgvThietbi.DataSource = bll.GetAllThietBi();
+            dgvThietbi.ReadOnly = true;
             LoadPhongData();
             //txtMaphong.Text = maphongnhan;
             // dgvThietbi.DataSource = bll.GetThietBiTheoPhong(txtMaphong.Text);
@@ -42,13 +43,46 @@ namespace QuanLyKyTucXa_main
             cbMaphong.SelectedIndex = -1;
         }
 
+        private void ClearBox()
+        {
+            txtMathietbi.Enabled = true;
+            txtMathietbi.Clear();
+            txtMathietbi.Enabled = false;
+
+            cbMaphong.SelectedIndex = -1;
+            cbMaphong.Enabled = true;
+
+            txtTenthietbi.Clear();
+
+            numericUpDownSoluong.Value = 0;
+            txtTinhtrang.Clear();
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            FrmQuanLyThietBi_Load(sender, e);
+            ClearBox();
+        }
+
         private void btnThem_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(cbMaphong.Text) || string.IsNullOrWhiteSpace(txtTenthietbi.Text))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (numericUpDownSoluong.Value <= 0)
+            {
+                MessageBox.Show("Số lượng phải lớn hơn 0", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             ThietBi tb = new ThietBi(
-                cbMaphong.Text,
-                txtTentb.Text,
+                cbMaphong.Text.Trim(),
+                txtTenthietbi.Text.Trim(),
                 (int)numericUpDownSoluong.Value,
-                txtTinhtrang.Text
+                txtTinhtrang.Text.Trim()
             );
 
             string error;
@@ -62,39 +96,42 @@ namespace QuanLyKyTucXa_main
             btnLamMoi_Click(sender, e);
         }
 
+
         private void dgvThietbi_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int vitri = e.RowIndex;
             if (vitri >= 0)
             {
-                cbMaphong.Text = dgvThietbi.Rows[vitri].Cells[0].Value.ToString();
-                txtTentb.Text = dgvThietbi.Rows[vitri].Cells[1].Value.ToString();
-                numericUpDownSoluong.Value = Decimal.Parse(dgvThietbi.Rows[vitri].Cells[2].Value.ToString());
-                txtTinhtrang.Text = dgvThietbi.Rows[vitri].Cells[3].Value.ToString();
+                txtMathietbi.Text = dgvThietbi.Rows[vitri].Cells["mathietbi"].Value.ToString();
+                cbMaphong.Text = dgvThietbi.Rows[vitri].Cells["maphong"].Value.ToString();
+                cbMaphong.Enabled = false;
+                txtTenthietbi.Text = dgvThietbi.Rows[vitri].Cells["tenthietbi"].Value.ToString();
+                // txtTenthietbi.Enabled = false;
+                numericUpDownSoluong.Value = Decimal.Parse(dgvThietbi.Rows[vitri].Cells["soluong"].Value.ToString());
+                txtTinhtrang.Text = dgvThietbi.Rows[vitri].Cells["tinhtrang"].Value.ToString();
             }
-        }
-
-        private void ClearBox()
-        {
-            cbMaphong.SelectedIndex = -1;
-            txtTentb.Clear();
-            numericUpDownSoluong.Value = 0;
-            txtTinhtrang.Clear();
         }
 
         private void btnCapnhap_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(cbMaphong.Text) || string.IsNullOrEmpty(txtTentb.Text))
+            if (string.IsNullOrEmpty(cbMaphong.Text) || string.IsNullOrEmpty(txtTenthietbi.Text))
             {
                 MessageBox.Show("Vui lòng chọn thiết bị cần cập nhật!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
+            if (numericUpDownSoluong.Value <= 0)
+            {
+                MessageBox.Show("Số lượng phải lớn hơn 0", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             ThietBi tb = new ThietBi(
+                int.Parse(txtMathietbi.Text),
                 cbMaphong.Text.Trim(),
-                txtTentb.Text,
+                txtTenthietbi.Text.Trim(),
                 (int)numericUpDownSoluong.Value,
-                txtTinhtrang.Text
+                txtTinhtrang.Text.Trim()
             );
 
             string error;
@@ -109,10 +146,9 @@ namespace QuanLyKyTucXa_main
         }
 
 
-
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (cbMaphong.Text == "" || txtTentb.Text == "")
+            if (cbMaphong.Text == "" || txtTenthietbi.Text == "")
             {
                 MessageBox.Show("Vui lòng chọn 1 dòng để xóa",
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -121,17 +157,11 @@ namespace QuanLyKyTucXa_main
             DialogResult dlr = MessageBox.Show("Bạn có chắc chắn xóa", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dlr == DialogResult.Yes)
             {
-                bll.DeleteThietBi(cbMaphong.Text, txtTentb.Text);
+                bll.DeleteThietBi(txtMathietbi.Text);
                 btnLamMoi_Click(sender, e);
             }
             else if (dlr == DialogResult.No)
                 return;
-        }
-
-        private void btnLamMoi_Click(object sender, EventArgs e)
-        {
-            FrmQuanLyThietBi_Load(sender, e);
-            ClearBox();
         }
 
         //Kéo giao diện

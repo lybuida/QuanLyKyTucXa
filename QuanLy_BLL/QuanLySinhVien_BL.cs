@@ -87,5 +87,10 @@ namespace QuanLy_BLL
         //        throw ex;
         //    }
         //}
+
+        public List<string> SelectMaSinhVien()
+        {
+            return quanLySinhVien_DAL.SelectMaSinhVien();
+        }
     }
 }

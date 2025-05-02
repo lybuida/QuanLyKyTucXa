@@ -17,9 +17,9 @@ namespace QuanLy_DAL
         {
             // Link của chi, mn đổi cái khác nha
             //string cnStr = "Data Source=DESKTOP-8862V4F\\LEGIANG2;Initial Catalog=QuanLyKTX;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
-            //string cnStr = "Data Source=DESKTOP-AA20CEC\\LITTLETEETH;Initial Catalog=QuanLyKyTucXa;Integrated Security=True";
+            string cnStr = "Data Source=DESKTOP-AA20CEC\\LITTLETEETH;Initial Catalog=QuanLyKyTucXa;Integrated Security=True";
 
-            string cnStr = "Data Source=LAPTOP-MAMQ0DB1\\LION;Initial Catalog=QuanLyKyTucXa;Integrated Security=True";
+            //string cnStr = "Data Source=LAPTOP-MAMQ0DB1\\LION;Initial Catalog=QuanLyKyTucXa;Integrated Security=True";
             //string cnStr = "Data Source=DESKTOP-8862V4F\\LEGIANG2;Initial Catalog=QuanLyKyTucXa;Integrated Security=True;Trust Server Certificate=True";
             cn = new SqlConnection(cnStr);
         }
@@ -37,8 +37,8 @@ namespace QuanLy_DAL
             {
                 throw ex;
             }
-
         }
+
         public void DisConnect()
         {
             try
@@ -53,6 +53,7 @@ namespace QuanLy_DAL
                 throw ex;
             }
         }
+
         public object MyExecuteScalar(string sql, CommandType type)
         {
             try
@@ -139,5 +140,4 @@ namespace QuanLy_DAL
             }
         }
     }
-
 }

@@ -29,8 +29,16 @@ namespace QuanLyKyTucXa_main
         private void FrmQuanLyTienNuoc_Load(object sender, EventArgs e)
         {
             LoadPhong();
-            LoadTienDien();
+            LoadTienNuoc();
             ClearInputs();
+            LoadTrangThaiComboBox();
+        }
+
+        private void LoadTrangThaiComboBox()
+        {
+            cbTrangthai.Items.Clear();
+            cbTrangthai.Items.Add("Chưa thanh toán");
+            cbTrangthai.Items.Add("Đã thanh toán");
         }
 
         private void LoadPhong()
@@ -41,7 +49,7 @@ namespace QuanLyKyTucXa_main
             cbMaphong.SelectedIndex = -1;
         }
 
-        private void LoadTienDien()
+        private void LoadTienNuoc()
         {
             dgvTiennuoc.DataSource = bll.GetAllTienNuoc();
             dgvTiennuoc.AutoGenerateColumns = true;
@@ -64,11 +72,19 @@ namespace QuanLyKyTucXa_main
             dtpNgaylap.Value = DateTime.Now;
             txtChisomoi.Clear();
             cbTrangthai.SelectedIndex = -1;
-            txtTiennuoc.Text = "22.000 / khối";
+            txtTiennuoc.Clear();
         }
 
         private void btnLammoi_Click(object sender, EventArgs e)
         {
+            txtMahoadon.Enabled = true;    // Bật tạm để có thể gán giá trị
+            txtMahoadon.Text = "";         // Xóa nội dung
+            txtMahoadon.Enabled = false;   // Tắt lại 
+
+            txtTiennuoc.Enabled = true;
+            txtTiennuoc.Text = "";
+            txtTiennuoc.Enabled = false;
+
             FrmQuanLyTienNuoc_Load(sender, e);
         }
 
@@ -148,7 +164,9 @@ namespace QuanLyKyTucXa_main
                 cbMaphong.Text = dgvTiennuoc.Rows[vitri].Cells[1].Value.ToString();
                 dtpNgaylap.Text = dgvTiennuoc.Rows[vitri].Cells[2].Value.ToString();
                 //  txtChisomoi.Text = dgvTiendien.Rows[vitri].Cells[5].Value.ToString();
-                txtTiennuoc.Text = dgvTiennuoc.Rows[vitri].Cells[6].Value.ToString();
+               // txtTiennuoc.Text = dgvTiennuoc.Rows[vitri].Cells[6].Value.ToString();
+                decimal tienDien = Convert.ToDecimal(dgvTiennuoc.Rows[vitri].Cells[6].Value);
+                txtTiennuoc.Text = tienDien.ToString("#,##0") + " VNĐ";
                 cbTrangthai.Text = dgvTiennuoc.Rows[vitri].Cells[7].Value.ToString();
                 if (cbTrangthai.Text == "Chưa thanh toán")
                     btnThanhtoan.Enabled = true;
@@ -249,7 +267,7 @@ namespace QuanLyKyTucXa_main
                 int sokhoi = bll.GetSoKhoi(txtMahoadon.Text);
 
                 bll.DeleteTienNuoc(txtMahoadon.Text);
-                LoadTienDien();
+                LoadTienNuoc();
                 ClearInputs();
             }
             else if (dlr == DialogResult.No)

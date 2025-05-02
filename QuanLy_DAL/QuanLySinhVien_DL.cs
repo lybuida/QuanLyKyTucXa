@@ -381,63 +381,86 @@ namespace QuanLy_DAL
                 DisConnect();
             }
         }
+
+        //    public List<SinhVien> TimKiemSinhVien(string keyword, KieuTimKiem kieuTim)
+        //    {
+        //        List<SinhVien> sinhViens = new List<SinhVien>();
+        //        string sql = "SELECT * FROM SinhVien WHERE ";
+
+        //        switch (kieuTim)
+        //        {
+        //            case KieuTimKiem.TheoMaSV:
+        //                sql += "masv LIKE @keyword";
+        //                break;
+        //            case KieuTimKiem.TheoTenSV:
+        //                sql += "tensv LIKE @keyword";
+        //                break;
+        //            case KieuTimKiem.TheoMaPhong:
+        //                sql += "maphong LIKE @keyword";
+        //                break;
+        //            default:
+        //                throw new Exception("Kiểu tìm kiếm không hợp lệ");
+        //        }
+
+        //        try
+        //        {
+        //            Connect();
+        //            SqlCommand cmd = new SqlCommand(sql, cn);
+        //            cmd.Parameters.AddWithValue("@keyword", "%" + keyword + "%");
+        //            SqlDataReader reader = cmd.ExecuteReader();
+
+        //            while (reader.Read())
+        //            {
+        //                SinhVien sv = new SinhVien(
+        //                    reader["masv"].ToString(),
+        //                    reader["tensv"].ToString(),
+        //                    reader["gioitinh"].ToString(),
+        //                    reader["ngaysinh"].ToString(),
+        //                    reader["quequan"].ToString(),
+        //                    reader["khoa"].ToString(),
+        //                    reader["lop"].ToString(),
+        //                    reader["loaiuutien"].ToString(),
+        //                    reader["maphong"].ToString()
+        //                );
+        //                sinhViens.Add(sv);
+        //            }
+
+        //            reader.Close();
+        //            return sinhViens;
+        //        }
+        //        catch (SqlException ex)
+        //        {
+        //            throw ex;
+        //        }
+        //        finally
+        //        {
+        //            DisConnect();
+        //        }
+
+        public List<string> SelectMaSinhVien()
+        {
+            List<string> list = new List<string>();
+            string sql = "SELECT masv FROM SinhVien";
+
+            try
+            {
+                Connect();
+                SqlDataReader reader = MyExecuteReader(sql, CommandType.Text);
+                while (reader.Read())
+                {
+                    list.Add(reader["masv"].ToString());
+                }
+                reader.Close();
+                return list;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                DisConnect();
+            }
+        }
     }
-
-
-
-    //    public List<SinhVien> TimKiemSinhVien(string keyword, KieuTimKiem kieuTim)
-    //    {
-    //        List<SinhVien> sinhViens = new List<SinhVien>();
-    //        string sql = "SELECT * FROM SinhVien WHERE ";
-
-    //        switch (kieuTim)
-    //        {
-    //            case KieuTimKiem.TheoMaSV:
-    //                sql += "masv LIKE @keyword";
-    //                break;
-    //            case KieuTimKiem.TheoTenSV:
-    //                sql += "tensv LIKE @keyword";
-    //                break;
-    //            case KieuTimKiem.TheoMaPhong:
-    //                sql += "maphong LIKE @keyword";
-    //                break;
-    //            default:
-    //                throw new Exception("Kiểu tìm kiếm không hợp lệ");
-    //        }
-
-    //        try
-    //        {
-    //            Connect();
-    //            SqlCommand cmd = new SqlCommand(sql, cn);
-    //            cmd.Parameters.AddWithValue("@keyword", "%" + keyword + "%");
-    //            SqlDataReader reader = cmd.ExecuteReader();
-
-    //            while (reader.Read())
-    //            {
-    //                SinhVien sv = new SinhVien(
-    //                    reader["masv"].ToString(),
-    //                    reader["tensv"].ToString(),
-    //                    reader["gioitinh"].ToString(),
-    //                    reader["ngaysinh"].ToString(),
-    //                    reader["quequan"].ToString(),
-    //                    reader["khoa"].ToString(),
-    //                    reader["lop"].ToString(),
-    //                    reader["loaiuutien"].ToString(),
-    //                    reader["maphong"].ToString()
-    //                );
-    //                sinhViens.Add(sv);
-    //            }
-
-    //            reader.Close();
-    //            return sinhViens;
-    //        }
-    //        catch (SqlException ex)
-    //        {
-    //            throw ex;
-    //        }
-    //        finally
-    //        {
-    //            DisConnect();
-    //        }
-    //    }
 }

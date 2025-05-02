@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLy_BLL;
 using TransferObject;
+using static System.Net.Mime.MediaTypeNames;
 
 
 namespace QuanLyKyTucXa_main
@@ -22,25 +23,40 @@ namespace QuanLyKyTucXa_main
 
 
         BLL_KyLuat bll = new QuanLy_BLL.BLL_KyLuat();
-        BLL_SinhVien bllSv = new QuanLy_BLL.BLL_SinhVien();
+        QuanLySinhVien_BL bllSv = new QuanLy_BLL.QuanLySinhVien_BL();
 
         private void FrmQuanLyKyLuat_Load(object sender, EventArgs e)
+        {
+            LoadMasv();
+            dgvKyluat.DataSource = bll.GetAllKyLuat();
+            dgvKyluat.ReadOnly = true;
+        }
+
+        private void LoadMasv()
         {
             cbMasv.DataSource = bllSv.SelectMaSinhVien();
             cbMasv.DisplayMember = "masv";
             cbMasv.SelectedIndex = -1;
-            dgvKyluat.DataSource = bll.GetAllKyLuat();
         }
-
         private void ClearBox()
         {
-            txtId.Clear();
+            txtMakyluat.Enabled = true;
+            txtMakyluat.Clear();
+            txtMakyluat.Enabled = false;
+
             cbMasv.SelectedIndex = -1;
             txtKyluat.Clear();
             dtpNgaykyluat.Value = DateTime.Now;
             txtTienphat.Clear();
             rbMasv.Checked = false;
             rbKyluat.Checked = false;
+            txtTimkiem.Clear();
+        }
+
+        private void btnLammoi_Click(object sender, EventArgs e)
+        {
+            FrmQuanLyKyLuat_Load(sender, e);
+            ClearBox();
         }
 
         private bool ValidateInput()
@@ -80,14 +96,14 @@ namespace QuanLyKyTucXa_main
 
         private void btnCapnhap_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtId.Text))
+            if (string.IsNullOrWhiteSpace(txtMakyluat.Text))
             {
                 MessageBox.Show("Vui lòng chọn 1 dòng để sửa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (!ValidateInput()) return;
 
-            KyLuat kl = new KyLuat(int.Parse(txtId.Text), cbMasv.Text, txtKyluat.Text, dtpNgaykyluat.Value, float.Parse(txtTienphat.Text));
+            KyLuat kl = new KyLuat(int.Parse(txtMakyluat.Text), cbMasv.Text, txtKyluat.Text, dtpNgaykyluat.Value, float.Parse(txtTienphat.Text));
             bool result = bll.UpdateKyLuat(kl);
 
             if (result)
@@ -100,7 +116,7 @@ namespace QuanLyKyTucXa_main
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtId.Text))
+            if (string.IsNullOrWhiteSpace(txtMakyluat.Text))
             {
                 MessageBox.Show("Vui lòng chọn 1 dòng để xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -109,7 +125,7 @@ namespace QuanLyKyTucXa_main
             DialogResult dr = MessageBox.Show("Bạn có chắc chắn muốn xóa?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
-                bool result = bll.DeleteKyLuat(int.Parse(txtId.Text));
+                bool result = bll.DeleteKyLuat(int.Parse(txtMakyluat.Text));
                 if (result)
                     MessageBox.Show("Đã xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
@@ -119,16 +135,6 @@ namespace QuanLyKyTucXa_main
             }
         }
 
-        private void btnLammoi_Click(object sender, EventArgs e)
-        {
-            FrmQuanLyKyLuat_Load(sender, e);
-            ClearBox();
-            cbMasv.Enabled = true;
-            txtKyluat.Enabled = true;
-            dtpNgaykyluat.Enabled = true;
-            txtTienphat.Enabled = true;
-            txtTimkiem.Clear();
-        }
 
         private void btnTimkiem_Click(object sender, EventArgs e)
         {
@@ -167,7 +173,7 @@ namespace QuanLyKyTucXa_main
             int index = e.RowIndex;
             if (index >= 0 && index < dgvKyluat.Rows.Count)
             {
-                txtId.Text = dgvKyluat.Rows[index].Cells[0].Value?.ToString();
+                txtMakyluat.Text = dgvKyluat.Rows[index].Cells[0].Value?.ToString();
                 cbMasv.Text = dgvKyluat.Rows[index].Cells[1].Value?.ToString();
                 txtKyluat.Text = dgvKyluat.Rows[index].Cells[2].Value?.ToString();
                 dtpNgaykyluat.Text = dgvKyluat.Rows[index].Cells[3].Value.ToString();
@@ -179,7 +185,7 @@ namespace QuanLyKyTucXa_main
         {
             cbMasv.Enabled = rbMasv.Checked;
             txtKyluat.Enabled = !rbMasv.Checked;
-            txtId.Enabled = false;
+            txtMakyluat.Enabled = false;
             dtpNgaykyluat.Enabled = false;
             txtTienphat.Enabled = false;
         }
@@ -188,7 +194,7 @@ namespace QuanLyKyTucXa_main
         {
             txtKyluat.Enabled = rbKyluat.Checked;
             cbMasv.Enabled = !rbKyluat.Checked;
-            txtId.Enabled = false;
+            txtMakyluat.Enabled = false;
             dtpNgaykyluat.Enabled = false;
             txtTienphat.Enabled = false;
         }

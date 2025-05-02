@@ -21,7 +21,9 @@ namespace QuanLyKyTucXa_main
         {
             LoadDayComboBox();
             LoadPhongData();
-            chatBotControl1.Visible = false;
+            LoadLoaiPhongComboBox();
+            LoadXepLoaiComboBox();
+          //  chatBotControl1.Visible = false;
         }
 
         private void LoadDayComboBox()
@@ -38,6 +40,50 @@ namespace QuanLyKyTucXa_main
             var list = bllPhong.GetAllPhong();
             dgvPhong.DataSource = list;
             dgvPhong.AutoGenerateColumns = true;
+            dgvPhong.ReadOnly = true;
+        }
+
+        private void LoadLoaiPhongComboBox()
+        {
+            cbLoaiphong.Items.Clear();
+            cbLoaiphong.Items.Add("Nam");
+            cbLoaiphong.Items.Add("Nữ");
+        }
+
+        private void LoadXepLoaiComboBox()
+        {
+            cbXeploai.Items.Clear();
+            cbXeploai.Items.Add("Thường");
+            cbXeploai.Items.Add("Vip");
+        }
+
+        private void ClearInputs()
+        {
+            txtMaphong.Clear();
+            txtTenphong.Clear();
+
+            txtSosvhientai.Enabled = true;
+            txtSosvhientai.Clear();
+            txtSosvhientai.Enabled = false;
+
+            txtSosvtoida.Clear();
+
+            txtTinhtrang.Enabled = true;
+            txtTinhtrang.Clear();
+            txtTinhtrang.Enabled = false;
+
+            cbLoaiphong.SelectedIndex = -1;
+            cbXeploai.SelectedIndex = -1;
+            LoadDayComboBox();
+            txtTimkiem.Clear();
+            checkBox1.Checked = false;
+            rbTktheoma.Checked = rbTktheoten.Checked = rbTktheomaday.Checked = false;
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            LoadPhongData();
+            ClearInputs();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -94,12 +140,6 @@ namespace QuanLyKyTucXa_main
             }
         }
 
-        private void btnLamMoi_Click(object sender, EventArgs e)
-        {
-            LoadPhongData();
-            ClearInputs();
-        }
-
         private void btnTimkiem_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtTimkiem.Text))
@@ -111,7 +151,7 @@ namespace QuanLyKyTucXa_main
             string truong = "";
             if (rbTktheoma.Checked) truong = "maphong";
             else if (rbTktheoten.Checked) truong = "tenphong";
-            else if (rbTkTheoMaday.Checked) truong = "day";
+            else if (rbTktheomaday.Checked) truong = "day";
 
             if (string.IsNullOrEmpty(truong))
             {
@@ -159,24 +199,9 @@ namespace QuanLyKyTucXa_main
             return true;
         }
 
-        private void ClearInputs()
-        {
-            txtMaphong.Clear();
-            txtTenphong.Clear();
-            txtSosvhientai.Clear();
-            txtSosvtoida.Clear();
-            txtTinhtrang.Clear();
-            cbLoaiphong.SelectedIndex = -1;
-            cbXeploai.SelectedIndex = -1;
-            cbDay.SelectedIndex = -1;
-            txtTimkiem.Clear();
-            checkBox1.Checked = false;
-            rbTktheoma.Checked = rbTktheoten.Checked = rbTkTheoMaday.Checked = false;
-        }
-
         private void btnToggleChatBot_Click(object sender, EventArgs e)
         {
-            chatBotControl1.Visible = !chatBotControl1.Visible;
+            //chatBotControl1.Visible = !chatBotControl1.Visible;
         }
     }
 }

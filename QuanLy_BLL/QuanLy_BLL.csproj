@@ -43,7 +43,6 @@
   <ItemGroup>
     <Compile Include="BLL_KyLuat.cs" />
     <Compile Include="BLL_Phong.cs" />
-    <Compile Include="BLL_SinhVien.cs" />
     <Compile Include="BLL_ThietBi.cs" />
     <Compile Include="BLL_TienDien.cs" />
     <Compile Include="BLL_TienNuoc.cs" />

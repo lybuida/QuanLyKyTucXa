@@ -26,7 +26,7 @@ namespace QuanLy_BLL
 
             if (string.IsNullOrEmpty(tb.Tenthietbi) || tb.Soluong <= 0)
             {
-                error = "Tên thiết bị không hợp lệ hoặc số lượng <= 0";
+                error = "Bạn chưa điền tên thiết bị hoặc số lượng <= 0";
                 return false;
             }
 
@@ -46,9 +46,10 @@ namespace QuanLy_BLL
             return dal.UpdateThietBi(tb);
         }
 
-        public bool DeleteThietBi(string maphong, string tentb)
+        public bool DeleteThietBi(string mathietbi)
         {
-            return dal.DeleteThietBi(maphong, tentb);
+            return dal.DeleteThietBi(mathietbi);
         }
+
     }
 }

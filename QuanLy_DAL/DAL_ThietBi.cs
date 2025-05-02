@@ -19,6 +19,7 @@ namespace QuanLy_DAL
                 while (reader.Read())
                 {
                     ThietBi thietbi = new ThietBi(
+                        Convert.ToInt32(reader["mathietbi"]),
                         reader["maphong"].ToString(),
                         reader["tenthietbi"].ToString(),
                         Convert.ToInt32(reader["soluong"]),
@@ -54,6 +55,7 @@ namespace QuanLy_DAL
                 while (reader.Read())
                 {
                     ThietBi thietbi = new ThietBi(
+                        Convert.ToInt32(reader["mathietbi"]),
                         reader["maphong"].ToString(),
                         reader["tenthietbi"].ToString(),
                         Convert.ToInt32(reader["soluong"]),
@@ -93,18 +95,22 @@ namespace QuanLy_DAL
             {
                 throw ex;
             }
+            finally
+            {
+                DisConnect();
+            }
         }
 
         public bool UpdateThietBi(ThietBi tb)
         {
             string sql = @"UPDATE ThietBi 
-                           SET tenthietbi = @tentb, soluong = @soluong, tinhtrang = @tinhtrang 
-                           WHERE maphong = @maphong";
+                           SET soluong = @soluong, tinhtrang = @tinhtrang, tenthietbi = @tentb
+                           WHERE mathietbi = @mathietbi";
             try
             {
                 List<SqlParameter> parameters = new List<SqlParameter>
                 {
-                    new SqlParameter("@maphong", tb.Maphong),
+                    new SqlParameter("@mathietbi", tb.Mathietbi),
                     new SqlParameter("@tentb", tb.Tenthietbi),
                     new SqlParameter("@soluong", tb.Soluong),
                     new SqlParameter("@tinhtrang", tb.Tinhtrang)
@@ -115,23 +121,30 @@ namespace QuanLy_DAL
             {
                 throw ex;
             }
+            finally
+            {
+                DisConnect();
+            }
         }
 
-        public bool DeleteThietBi(string maphong, string tentb)
+        public bool DeleteThietBi(string mathietbi)
         {
-            string sql = "DELETE FROM ThietBi WHERE maphong = @maphong AND tenthietbi = @tentb";
+            string sql = "DELETE FROM ThietBi WHERE mathietbi = @mathietbi";
             try
             {
                 List<SqlParameter> parameters = new List<SqlParameter>
                 {
-                    new SqlParameter("@maphong", maphong),
-                    new SqlParameter("@tentb", tentb)
+                    new SqlParameter("@mathietbi", mathietbi)
                 };
                 return MyExecuteNonQuery(sql, CommandType.Text, parameters) > 0;
             }
             catch (SqlException ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                DisConnect();
             }
         }
     }

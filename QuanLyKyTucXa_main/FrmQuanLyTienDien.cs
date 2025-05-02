@@ -12,6 +12,7 @@ using TransferObject;
 using System.IO;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using System.Web.UI.WebControls;
 
 namespace QuanLyKyTucXa_main
 {
@@ -30,7 +31,16 @@ namespace QuanLyKyTucXa_main
             LoadPhong();
             LoadTienDien();
             ClearInputs();
+            LoadTrangThaiComboBox();
         }
+
+        private void LoadTrangThaiComboBox()
+        {
+            cbTrangthai.Items.Clear();
+            cbTrangthai.Items.Add("Chưa thanh toán");
+            cbTrangthai.Items.Add("Đã thanh toán");
+        }
+
 
         private void LoadPhong()
         {
@@ -63,11 +73,19 @@ namespace QuanLyKyTucXa_main
             dtpNgaylap.Value = DateTime.Now;
             txtChisomoi.Clear();
             cbTrangthai.SelectedIndex = -1;
-            txtTiendien.Text = "3000đ / số";
+            txtTiendien.Clear();
         }
 
         private void btnLammoi_Click(object sender, EventArgs e)
         {
+            txtMahoadon.Enabled = true;    // Bật tạm để có thể gán giá trị
+            txtMahoadon.Text = "";         // Xóa nội dung
+            txtMahoadon.Enabled = false;   // Tắt lại để readonly + xám
+
+            txtTiendien.Enabled = true;
+            txtTiendien.Text = "";
+            txtTiendien.Enabled = false;
+
             FrmQuanLyTienDien_Load(sender, e);
         }
 
@@ -146,7 +164,8 @@ namespace QuanLyKyTucXa_main
                 txtMahoadon.Text = dgvTiendien.Rows[vitri].Cells[0].Value.ToString();
                 cbMaphong.Text = dgvTiendien.Rows[vitri].Cells[1].Value.ToString();
                 dtpNgaylap.Text = dgvTiendien.Rows[vitri].Cells[2].Value.ToString();
-                txtTiendien.Text = dgvTiendien.Rows[vitri].Cells[6].Value.ToString();
+                decimal tienDien = Convert.ToDecimal(dgvTiendien.Rows[vitri].Cells[6].Value);
+                txtTiendien.Text = tienDien.ToString("#,##0") + " VNĐ";
                 //  txtChisomoi.Text = dgvTiendien.Rows[vitri].Cells[5].Value.ToString();
                 cbTrangthai.Text = dgvTiendien.Rows[vitri].Cells[7].Value.ToString();
                 if (cbTrangthai.Text == "Chưa thanh toán")
@@ -344,6 +363,5 @@ namespace QuanLyKyTucXa_main
 
             MessageBox.Show("Đã xuất hóa đơn ra Desktop!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
     }
 }

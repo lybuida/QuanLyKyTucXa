@@ -43,7 +43,6 @@
   <ItemGroup>
     <Compile Include="DAL_KyLuat.cs" />
     <Compile Include="DAL_Phong.cs" />
-    <Compile Include="DAL_SinhVien.cs" />
     <Compile Include="DAL_ThietBi.cs" />
     <Compile Include="DAL_TienDien.cs" />
     <Compile Include="DAL_TienNuoc.cs" />

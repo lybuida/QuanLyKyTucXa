@@ -34,6 +34,7 @@
             this.btnDanhSachPhong = new System.Windows.Forms.Button();
             this.btnQuanlynguoidung = new System.Windows.Forms.Button();
             this.btnGuimaiThongbao = new System.Windows.Forms.Button();
+            this.btnDangkyphong = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnThanhtoanluong
@@ -96,11 +97,22 @@
             this.btnGuimaiThongbao.UseVisualStyleBackColor = true;
             this.btnGuimaiThongbao.Click += new System.EventHandler(this.btnGuimaiThongbao_Click);
             // 
+            // btnDangkyphong
+            // 
+            this.btnDangkyphong.Location = new System.Drawing.Point(282, 181);
+            this.btnDangkyphong.Name = "btnDangkyphong";
+            this.btnDangkyphong.Size = new System.Drawing.Size(161, 71);
+            this.btnDangkyphong.TabIndex = 12;
+            this.btnDangkyphong.Text = "Đăng ký phòng";
+            this.btnDangkyphong.UseVisualStyleBackColor = true;
+            this.btnDangkyphong.Click += new System.EventHandler(this.btnDangkyphong_Click);
+            // 
             // FrmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 512);
+            this.Controls.Add(this.btnDangkyphong);
             this.Controls.Add(this.btnGuimaiThongbao);
             this.Controls.Add(this.btnQuanlynguoidung);
             this.Controls.Add(this.btnThanhtoanluong);
@@ -121,5 +133,6 @@
         private System.Windows.Forms.Button btnDanhSachPhong;
         private System.Windows.Forms.Button btnQuanlynguoidung;
         private System.Windows.Forms.Button btnGuimaiThongbao;
+        private System.Windows.Forms.Button btnDangkyphong;
     }
 }

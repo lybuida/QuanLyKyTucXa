@@ -36,11 +36,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label11 = new System.Windows.Forms.Label();
             this.dgvSVChoDuyet = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.dgvtbcMaSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvtbcTenSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvtbcGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvtbcNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvtbcQueQuan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvtbcKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvtbcLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvtbcLoaiUuTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GBtnGuiemail = new Guna.UI2.WinForms.Guna2Button();
-            this.GBtnDong = new Guna.UI2.WinForms.Guna2Button();
             this.GBtnXepphong = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.dgvSVDaDuyet = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -55,31 +62,26 @@
             this.loaiuutien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maphong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvtbcMaSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvtbcTenSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvtbcGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvtbcNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvtbcQueQuan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvtbcKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvtbcLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvtbcLoaiUuTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSVChoDuyet)).BeginInit();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2CustomGradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSVDaDuyet)).BeginInit();
+            this.guna2CustomGradientPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.White;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(442, 32);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(421, 25);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(363, 25);
+            this.label11.Size = new System.Drawing.Size(434, 29);
             this.label11.TabIndex = 60;
             this.label11.Text = "Danh sách Sinh Viên Đăng ký chờ duyệt";
             // 
@@ -122,7 +124,7 @@
             this.dgvSVChoDuyet.RowHeadersVisible = false;
             this.dgvSVChoDuyet.RowHeadersWidth = 51;
             this.dgvSVChoDuyet.RowTemplate.Height = 24;
-            this.dgvSVChoDuyet.Size = new System.Drawing.Size(1201, 166);
+            this.dgvSVChoDuyet.Size = new System.Drawing.Size(1201, 194);
             this.dgvSVChoDuyet.TabIndex = 65;
             this.dgvSVChoDuyet.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvSVChoDuyet.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -146,37 +148,89 @@
             this.dgvSVChoDuyet.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvSVChoDuyet.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // dgvtbcMaSV
+            // 
+            this.dgvtbcMaSV.DataPropertyName = "masvdky";
+            this.dgvtbcMaSV.HeaderText = "Mã sinh viên";
+            this.dgvtbcMaSV.MinimumWidth = 6;
+            this.dgvtbcMaSV.Name = "dgvtbcMaSV";
+            // 
+            // dgvtbcTenSV
+            // 
+            this.dgvtbcTenSV.DataPropertyName = "tensv";
+            this.dgvtbcTenSV.HeaderText = "Tên sinh viên";
+            this.dgvtbcTenSV.MinimumWidth = 6;
+            this.dgvtbcTenSV.Name = "dgvtbcTenSV";
+            // 
+            // dgvtbcGioiTinh
+            // 
+            this.dgvtbcGioiTinh.DataPropertyName = "gioitinh";
+            this.dgvtbcGioiTinh.HeaderText = "Giới tính";
+            this.dgvtbcGioiTinh.MinimumWidth = 6;
+            this.dgvtbcGioiTinh.Name = "dgvtbcGioiTinh";
+            // 
+            // dgvtbcNgaySinh
+            // 
+            this.dgvtbcNgaySinh.DataPropertyName = "ngaysinh";
+            this.dgvtbcNgaySinh.HeaderText = "Ngày sinh";
+            this.dgvtbcNgaySinh.MinimumWidth = 6;
+            this.dgvtbcNgaySinh.Name = "dgvtbcNgaySinh";
+            // 
+            // dgvtbcQueQuan
+            // 
+            this.dgvtbcQueQuan.DataPropertyName = "quequan";
+            this.dgvtbcQueQuan.HeaderText = "Quê quán";
+            this.dgvtbcQueQuan.MinimumWidth = 6;
+            this.dgvtbcQueQuan.Name = "dgvtbcQueQuan";
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "Email";
+            this.email.MinimumWidth = 6;
+            this.email.Name = "email";
+            // 
+            // dgvtbcKhoa
+            // 
+            this.dgvtbcKhoa.DataPropertyName = "khoa";
+            this.dgvtbcKhoa.HeaderText = "Khóa";
+            this.dgvtbcKhoa.MinimumWidth = 6;
+            this.dgvtbcKhoa.Name = "dgvtbcKhoa";
+            // 
+            // dgvtbcLop
+            // 
+            this.dgvtbcLop.DataPropertyName = "lop";
+            this.dgvtbcLop.HeaderText = "Lớp";
+            this.dgvtbcLop.MinimumWidth = 6;
+            this.dgvtbcLop.Name = "dgvtbcLop";
+            // 
+            // dgvtbcLoaiUuTien
+            // 
+            this.dgvtbcLoaiUuTien.DataPropertyName = "loaiuutien";
+            this.dgvtbcLoaiUuTien.HeaderText = "Loại ưu tiên";
+            this.dgvtbcLoaiUuTien.MinimumWidth = 6;
+            this.dgvtbcLoaiUuTien.Name = "dgvtbcLoaiUuTien";
+            // 
             // guna2CustomGradientPanel1
             // 
             this.guna2CustomGradientPanel1.BorderRadius = 50;
             this.guna2CustomGradientPanel1.Controls.Add(this.dgvSVChoDuyet);
             this.guna2CustomGradientPanel1.Controls.Add(this.label11);
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(41, 27);
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(30, 144);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1209, 350);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1207, 323);
             this.guna2CustomGradientPanel1.TabIndex = 66;
             // 
             // guna2CustomGradientPanel2
             // 
             this.guna2CustomGradientPanel2.BorderRadius = 25;
-            this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox1);
             this.guna2CustomGradientPanel2.Controls.Add(this.GBtnGuiemail);
-            this.guna2CustomGradientPanel2.Controls.Add(this.GBtnDong);
             this.guna2CustomGradientPanel2.Controls.Add(this.GBtnXepphong);
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(1294, 201);
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(805, 492);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(329, 176);
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(432, 101);
             this.guna2CustomGradientPanel2.TabIndex = 72;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
-            this.pictureBox1.BackgroundImage = global::QuanLyKyTucXa_main.Properties.Resources.icons8_hand_cursor_100;
-            this.pictureBox1.Location = new System.Drawing.Point(14, 34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 101);
-            this.pictureBox1.TabIndex = 72;
-            this.pictureBox1.TabStop = false;
+            this.guna2CustomGradientPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel2_Paint);
             // 
             // GBtnGuiemail
             // 
@@ -186,38 +240,19 @@
             this.GBtnGuiemail.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.GBtnGuiemail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.GBtnGuiemail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.GBtnGuiemail.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GBtnGuiemail.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(2)))), ((int)(((byte)(155)))));
+            this.GBtnGuiemail.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GBtnGuiemail.ForeColor = System.Drawing.Color.White;
             this.GBtnGuiemail.Image = global::QuanLyKyTucXa_main.Properties.Resources.icons8_gmail_logo_100;
             this.GBtnGuiemail.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.GBtnGuiemail.ImageSize = new System.Drawing.Size(40, 40);
-            this.GBtnGuiemail.Location = new System.Drawing.Point(143, 65);
+            this.GBtnGuiemail.ImageSize = new System.Drawing.Size(30, 30);
+            this.GBtnGuiemail.Location = new System.Drawing.Point(238, 19);
             this.GBtnGuiemail.Name = "GBtnGuiemail";
-            this.GBtnGuiemail.Size = new System.Drawing.Size(157, 45);
+            this.GBtnGuiemail.Size = new System.Drawing.Size(177, 62);
             this.GBtnGuiemail.TabIndex = 68;
             this.GBtnGuiemail.Text = "Gửi email";
             this.GBtnGuiemail.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.GBtnGuiemail.Click += new System.EventHandler(this.GBtnGuiemail_Click);
-            // 
-            // GBtnDong
-            // 
-            this.GBtnDong.BackColor = System.Drawing.Color.White;
-            this.GBtnDong.BorderRadius = 20;
-            this.GBtnDong.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.GBtnDong.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.GBtnDong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.GBtnDong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.GBtnDong.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GBtnDong.ForeColor = System.Drawing.Color.White;
-            this.GBtnDong.Image = global::QuanLyKyTucXa_main.Properties.Resources.icons8_cancel_40;
-            this.GBtnDong.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.GBtnDong.ImageSize = new System.Drawing.Size(40, 40);
-            this.GBtnDong.Location = new System.Drawing.Point(143, 116);
-            this.GBtnDong.Name = "GBtnDong";
-            this.GBtnDong.Size = new System.Drawing.Size(157, 45);
-            this.GBtnDong.TabIndex = 71;
-            this.GBtnDong.Text = "    Đóng";
-            this.GBtnDong.Click += new System.EventHandler(this.GBtnDong_Click);
             // 
             // GBtnXepphong
             // 
@@ -227,14 +262,15 @@
             this.GBtnXepphong.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.GBtnXepphong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.GBtnXepphong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.GBtnXepphong.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GBtnXepphong.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(2)))), ((int)(((byte)(155)))));
+            this.GBtnXepphong.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GBtnXepphong.ForeColor = System.Drawing.Color.White;
             this.GBtnXepphong.Image = global::QuanLyKyTucXa_main.Properties.Resources.icons8_sorting_arrows_horizontal_100;
             this.GBtnXepphong.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.GBtnXepphong.ImageSize = new System.Drawing.Size(40, 40);
-            this.GBtnXepphong.Location = new System.Drawing.Point(143, 14);
+            this.GBtnXepphong.ImageSize = new System.Drawing.Size(30, 30);
+            this.GBtnXepphong.Location = new System.Drawing.Point(19, 19);
             this.GBtnXepphong.Name = "GBtnXepphong";
-            this.GBtnXepphong.Size = new System.Drawing.Size(157, 45);
+            this.GBtnXepphong.Size = new System.Drawing.Size(177, 62);
             this.GBtnXepphong.TabIndex = 67;
             this.GBtnXepphong.Text = "Xếp phòng";
             this.GBtnXepphong.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -245,9 +281,9 @@
             this.guna2CustomGradientPanel3.BorderRadius = 50;
             this.guna2CustomGradientPanel3.Controls.Add(this.dgvSVDaDuyet);
             this.guna2CustomGradientPanel3.Controls.Add(this.label1);
-            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(44, 402);
+            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(28, 613);
             this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
-            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(1209, 336);
+            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(1209, 287);
             this.guna2CustomGradientPanel3.TabIndex = 73;
             // 
             // dgvSVDaDuyet
@@ -290,7 +326,7 @@
             this.dgvSVDaDuyet.RowHeadersVisible = false;
             this.dgvSVDaDuyet.RowHeadersWidth = 51;
             this.dgvSVDaDuyet.RowTemplate.Height = 24;
-            this.dgvSVDaDuyet.Size = new System.Drawing.Size(1201, 166);
+            this.dgvSVDaDuyet.Size = new System.Drawing.Size(1201, 173);
             this.dgvSVDaDuyet.TabIndex = 65;
             this.dgvSVDaDuyet.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvSVDaDuyet.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -388,96 +424,73 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(449, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(353, 25);
+            this.label1.Size = new System.Drawing.Size(422, 29);
             this.label1.TabIndex = 60;
             this.label1.Text = "Danh sách Sinh Viên Đăng ký đã duyệt";
             // 
-            // dgvtbcMaSV
+            // guna2CustomGradientPanel4
             // 
-            this.dgvtbcMaSV.DataPropertyName = "masvdky";
-            this.dgvtbcMaSV.HeaderText = "Mã sinh viên";
-            this.dgvtbcMaSV.MinimumWidth = 6;
-            this.dgvtbcMaSV.Name = "dgvtbcMaSV";
+            this.guna2CustomGradientPanel4.BorderRadius = 25;
+            this.guna2CustomGradientPanel4.Controls.Add(this.pictureBox1);
+            this.guna2CustomGradientPanel4.Controls.Add(this.label2);
+            this.guna2CustomGradientPanel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(2)))), ((int)(((byte)(155)))));
+            this.guna2CustomGradientPanel4.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(2)))), ((int)(((byte)(155)))));
+            this.guna2CustomGradientPanel4.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(2)))), ((int)(((byte)(155)))));
+            this.guna2CustomGradientPanel4.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(2)))), ((int)(((byte)(155)))));
+            this.guna2CustomGradientPanel4.Location = new System.Drawing.Point(77, -19);
+            this.guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
+            this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(1090, 140);
+            this.guna2CustomGradientPanel4.TabIndex = 74;
             // 
-            // dgvtbcTenSV
+            // pictureBox1
             // 
-            this.dgvtbcTenSV.DataPropertyName = "tensv";
-            this.dgvtbcTenSV.HeaderText = "Tên sinh viên";
-            this.dgvtbcTenSV.MinimumWidth = 6;
-            this.dgvtbcTenSV.Name = "dgvtbcTenSV";
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(2)))), ((int)(((byte)(155)))));
+            this.pictureBox1.Image = global::QuanLyKyTucXa_main.Properties.Resources.icons8_contacts_94;
+            this.pictureBox1.Location = new System.Drawing.Point(32, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 62;
+            this.pictureBox1.TabStop = false;
             // 
-            // dgvtbcGioiTinh
+            // label2
             // 
-            this.dgvtbcGioiTinh.DataPropertyName = "gioitinh";
-            this.dgvtbcGioiTinh.HeaderText = "Giới tính";
-            this.dgvtbcGioiTinh.MinimumWidth = 6;
-            this.dgvtbcGioiTinh.Name = "dgvtbcGioiTinh";
-            // 
-            // dgvtbcNgaySinh
-            // 
-            this.dgvtbcNgaySinh.DataPropertyName = "ngaysinh";
-            this.dgvtbcNgaySinh.HeaderText = "Ngày sinh";
-            this.dgvtbcNgaySinh.MinimumWidth = 6;
-            this.dgvtbcNgaySinh.Name = "dgvtbcNgaySinh";
-            // 
-            // dgvtbcQueQuan
-            // 
-            this.dgvtbcQueQuan.DataPropertyName = "quequan";
-            this.dgvtbcQueQuan.HeaderText = "Quê quán";
-            this.dgvtbcQueQuan.MinimumWidth = 6;
-            this.dgvtbcQueQuan.Name = "dgvtbcQueQuan";
-            // 
-            // email
-            // 
-            this.email.DataPropertyName = "email";
-            this.email.HeaderText = "Email";
-            this.email.MinimumWidth = 6;
-            this.email.Name = "email";
-            // 
-            // dgvtbcKhoa
-            // 
-            this.dgvtbcKhoa.DataPropertyName = "khoa";
-            this.dgvtbcKhoa.HeaderText = "Khóa";
-            this.dgvtbcKhoa.MinimumWidth = 6;
-            this.dgvtbcKhoa.Name = "dgvtbcKhoa";
-            // 
-            // dgvtbcLop
-            // 
-            this.dgvtbcLop.DataPropertyName = "lop";
-            this.dgvtbcLop.HeaderText = "Lớp";
-            this.dgvtbcLop.MinimumWidth = 6;
-            this.dgvtbcLop.Name = "dgvtbcLop";
-            // 
-            // dgvtbcLoaiUuTien
-            // 
-            this.dgvtbcLoaiUuTien.DataPropertyName = "loaiuutien";
-            this.dgvtbcLoaiUuTien.HeaderText = "Loại ưu tiên";
-            this.dgvtbcLoaiUuTien.MinimumWidth = 6;
-            this.dgvtbcLoaiUuTien.Name = "dgvtbcLoaiUuTien";
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(2)))), ((int)(((byte)(155)))));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(163, 61);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(937, 31);
+            this.label2.TabIndex = 61;
+            this.label2.Text = "Sắp Xếp Phòng Cho Danh Sách Sinh Viên Đăng Ký Ký Túc Xá";
             // 
             // DanhSachDangKy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1635, 778);
+            this.BackColor = System.Drawing.Color.Plum;
+            this.ClientSize = new System.Drawing.Size(1285, 969);
+            this.Controls.Add(this.guna2CustomGradientPanel4);
             this.Controls.Add(this.guna2CustomGradientPanel3);
             this.Controls.Add(this.guna2CustomGradientPanel2);
             this.Controls.Add(this.guna2CustomGradientPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DanhSachDangKy";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DanhSachDangKy";
             this.Load += new System.EventHandler(this.DanhSachDangKy_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSVChoDuyet)).EndInit();
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
             this.guna2CustomGradientPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2CustomGradientPanel3.ResumeLayout(false);
             this.guna2CustomGradientPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSVDaDuyet)).EndInit();
+            this.guna2CustomGradientPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -488,9 +501,7 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2Button GBtnXepphong;
         private Guna.UI2.WinForms.Guna2Button GBtnGuiemail;
-        private Guna.UI2.WinForms.Guna2Button GBtnDong;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
         private Guna.UI2.WinForms.Guna2DataGridView dgvSVDaDuyet;
         private System.Windows.Forms.Label label1;
@@ -513,5 +524,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvtbcKhoa;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvtbcLop;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvtbcLoaiUuTien;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
     }
 }

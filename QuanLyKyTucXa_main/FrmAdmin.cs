@@ -52,5 +52,11 @@ namespace QuanLyKyTucXa_main
             FrmQuanLyNguoiDung frmQuanLyNguoiDung = new FrmQuanLyNguoiDung();
             frmQuanLyNguoiDung.Show();
         }
+
+        private void btnDangkyphong_Click(object sender, EventArgs e)
+        {
+            FrmDangKyPhong frmDangKyPhong = new FrmDangKyPhong();
+            frmDangKyPhong.Show();  
+        }
     }
 }

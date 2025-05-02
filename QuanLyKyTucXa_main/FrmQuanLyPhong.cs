@@ -203,5 +203,10 @@ namespace QuanLyKyTucXa_main
         {
             chatBotControl1.Visible = !chatBotControl1.Visible;
         }
+
+        private void chatBotControl1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

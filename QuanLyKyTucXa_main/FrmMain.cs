@@ -53,7 +53,7 @@ namespace QuanLyKyTucXa_main
             if (menuNSExpand == false)
             {
                 menuNhanSu.Height += 10;
-                if (menuNhanSu.Height >= 150)
+                if (menuNhanSu.Height >= 155)
                 {
                     timeMenuNhanSu.Stop();
                     menuNSExpand = true;
@@ -122,7 +122,7 @@ namespace QuanLyKyTucXa_main
             if (menuNSExpand == false)
             {
                 menuDV.Height += 10;
-                if (menuDV.Height >= 130)
+                if (menuDV.Height >= 110)
                 {
                     timeMenuDichVu.Stop();
                     menuNSExpand = true;
@@ -200,6 +200,24 @@ namespace QuanLyKyTucXa_main
         private void btnKyLuat_Click(object sender, EventArgs e)
         {
             openChildForm(new FrmQuanLyKyLuat(), new Size(129, 26), new Point(308, 15));
+        }
+
+        private void picGuiMail_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FrmThongBaoSinhVien(), new Size(129, 26), new Point(308, 15));
+        }
+
+        private void btnToggleChatBot_Click(object sender, EventArgs e)
+        {
+            chatBotControl1.Visible = !chatBotControl1.Visible;
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            this.Hide(); // Ẩn tạm FrmMainMenu đi trước
+            FrmDangNhap dangNhap = new FrmDangNhap();
+            dangNhap.ShowDialog(); // Chờ đăng nhập xong
+            this.Close(); // Đóng hẳn FrmMainMenu sau
         }
     }
 }

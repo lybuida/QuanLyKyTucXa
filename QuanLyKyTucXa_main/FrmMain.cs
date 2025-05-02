@@ -21,7 +21,7 @@ namespace QuanLyKyTucXa_main
         }
 
 
-        private Homecontrol homeControl;
+        //private Homecontrol homeControl;
 
 
         private void openChildForm(Form childForm, Size size, Point point)
@@ -39,9 +39,11 @@ namespace QuanLyKyTucXa_main
             childForm.Show();
             //thay doi title
             lblTitle.Text = childForm.Text;
-            lblTitle.Size = size;
-            lblTitle.Location = point;
-            //btnClose.Visible = true;
+            lblTitle.AutoSize = true;
+
+            // Đảm bảo không bị giới hạn chiều rộng
+            lblTitle.MaximumSize = new Size(panel2.Width, 0); // nếu cần
+            lblTitle.Left = (panel2.Width - lblTitle.PreferredWidth) / 2;
         }
 
 
@@ -85,21 +87,22 @@ namespace QuanLyKyTucXa_main
         }
         private void btnQlSV_Click(object sender, EventArgs e)
         {
-            //    openChildForm(new FrmQuanLySinhVien(), new Size(180, 26), new Point(325, 15));
+            openChildForm(new FrmQuanLySinhVien(), new Size(180, 26), new Point(325, 15));
         }
 
 
         //Home
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            //this.WindowState = FormWindowState.Maximized;
-            homeControl = new Homecontrol();
-            LoadUserControl(homeControl);
+            this.WindowState = FormWindowState.Maximized;
+            //homeControl = new Homecontrol();
+            //LoadUserControl(homeControl);
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            LoadUserControl(homeControl);
+            //LoadUserControl(homeControl);
+            openChildForm(new FrmHome(), new Size(192, 26), new Point(325, 15));
 
         }
 

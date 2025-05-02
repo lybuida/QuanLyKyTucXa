@@ -35,6 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnKyLuat = new Guna.UI2.WinForms.Guna2Button();
             this.menuCSVC = new Guna.UI2.WinForms.Guna2Panel();
@@ -52,8 +53,11 @@
             this.btnQuanLyNhanVien = new Guna.UI2.WinForms.Guna2Button();
             this.btnQlNhanSu = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel45 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.timeMenuNhanSu = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelMain = new System.Windows.Forms.Panel();
@@ -61,22 +65,18 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.timeMenuDichVu = new System.Windows.Forms.Timer(this.components);
             this.timeMenuCSVC = new System.Windows.Forms.Timer(this.components);
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnHome = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel_Top.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.menuCSVC.SuspendLayout();
             this.menuDV.SuspendLayout();
             this.menuNhanSu.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2ControlBox3
@@ -86,7 +86,7 @@
             this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox3.FillColor = System.Drawing.SystemColors.Control;
             this.guna2ControlBox3.IconColor = System.Drawing.Color.DarkGray;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(827, 3);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(973, 3);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.Size = new System.Drawing.Size(55, 38);
             this.guna2ControlBox3.TabIndex = 2;
@@ -109,7 +109,7 @@
             this.guna2Panel_Top.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(220)))), ((int)(((byte)(215)))));
             this.guna2Panel_Top.Location = new System.Drawing.Point(310, 0);
             this.guna2Panel_Top.Name = "guna2Panel_Top";
-            this.guna2Panel_Top.Size = new System.Drawing.Size(1007, 57);
+            this.guna2Panel_Top.Size = new System.Drawing.Size(1153, 57);
             this.guna2Panel_Top.TabIndex = 7;
             this.guna2Panel_Top.UseTransparentBackground = true;
             // 
@@ -131,7 +131,7 @@
             this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
             this.guna2ControlBox2.FillColor = System.Drawing.SystemColors.Control;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.DarkGray;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(888, 3);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1034, 3);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(55, 38);
             this.guna2ControlBox2.TabIndex = 2;
@@ -142,10 +142,23 @@
             this.guna2ControlBox1.BackColor = System.Drawing.Color.Silver;
             this.guna2ControlBox1.FillColor = System.Drawing.SystemColors.Control;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.DarkGray;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(949, 3);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1095, 3);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(55, 38);
             this.guna2ControlBox1.TabIndex = 0;
+            // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(220)))), ((int)(((byte)(215)))));
+            this.guna2PictureBox3.FillColor = System.Drawing.Color.DimGray;
+            this.guna2PictureBox3.Image = global::QuanLyKyTucXa_main.Properties.Resources.icons8_male_user_30;
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(20, 9);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(38, 45);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 8;
+            this.guna2PictureBox3.TabStop = false;
             // 
             // guna2Panel1
             // 
@@ -160,7 +173,7 @@
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(310, 736);
+            this.guna2Panel1.Size = new System.Drawing.Size(310, 948);
             this.guna2Panel1.TabIndex = 6;
             // 
             // btnKyLuat
@@ -178,7 +191,7 @@
             this.btnKyLuat.Location = new System.Drawing.Point(0, 735);
             this.btnKyLuat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKyLuat.Name = "btnKyLuat";
-            this.btnKyLuat.Size = new System.Drawing.Size(289, 44);
+            this.btnKyLuat.Size = new System.Drawing.Size(310, 44);
             this.btnKyLuat.TabIndex = 23;
             this.btnKyLuat.Text = "Quản lý kỷ luật";
             this.btnKyLuat.TextOffset = new System.Drawing.Point(8, 0);
@@ -193,7 +206,7 @@
             this.menuCSVC.Dock = System.Windows.Forms.DockStyle.Top;
             this.menuCSVC.Location = new System.Drawing.Point(0, 544);
             this.menuCSVC.Name = "menuCSVC";
-            this.menuCSVC.Size = new System.Drawing.Size(289, 191);
+            this.menuCSVC.Size = new System.Drawing.Size(310, 191);
             this.menuCSVC.TabIndex = 22;
             // 
             // btnThietBi
@@ -208,7 +221,7 @@
             this.btnThietBi.ForeColor = System.Drawing.Color.Black;
             this.btnThietBi.Location = new System.Drawing.Point(0, 138);
             this.btnThietBi.Name = "btnThietBi";
-            this.btnThietBi.Size = new System.Drawing.Size(289, 47);
+            this.btnThietBi.Size = new System.Drawing.Size(310, 47);
             this.btnThietBi.TabIndex = 10;
             this.btnThietBi.Text = "Thiết bị";
             this.btnThietBi.Click += new System.EventHandler(this.btnThietBi_Click);
@@ -225,7 +238,7 @@
             this.btnPhong.ForeColor = System.Drawing.Color.Black;
             this.btnPhong.Location = new System.Drawing.Point(0, 94);
             this.btnPhong.Name = "btnPhong";
-            this.btnPhong.Size = new System.Drawing.Size(289, 44);
+            this.btnPhong.Size = new System.Drawing.Size(310, 44);
             this.btnPhong.TabIndex = 9;
             this.btnPhong.Text = "Phòng";
             this.btnPhong.Click += new System.EventHandler(this.btnPhong_Click);
@@ -242,7 +255,7 @@
             this.btnDay.ForeColor = System.Drawing.Color.Black;
             this.btnDay.Location = new System.Drawing.Point(0, 49);
             this.btnDay.Name = "btnDay";
-            this.btnDay.Size = new System.Drawing.Size(289, 45);
+            this.btnDay.Size = new System.Drawing.Size(310, 45);
             this.btnDay.TabIndex = 8;
             this.btnDay.Text = "Dãy phòng";
             this.btnDay.Click += new System.EventHandler(this.btnDay_Click);
@@ -262,7 +275,7 @@
             this.btnQlCSVC.Location = new System.Drawing.Point(0, 0);
             this.btnQlCSVC.Margin = new System.Windows.Forms.Padding(4);
             this.btnQlCSVC.Name = "btnQlCSVC";
-            this.btnQlCSVC.Size = new System.Drawing.Size(289, 49);
+            this.btnQlCSVC.Size = new System.Drawing.Size(310, 49);
             this.btnQlCSVC.TabIndex = 7;
             this.btnQlCSVC.Text = "Quản lý cơ sở vật chất";
             this.btnQlCSVC.TextOffset = new System.Drawing.Point(8, 0);
@@ -276,7 +289,7 @@
             this.menuDV.Dock = System.Windows.Forms.DockStyle.Top;
             this.menuDV.Location = new System.Drawing.Point(0, 400);
             this.menuDV.Name = "menuDV";
-            this.menuDV.Size = new System.Drawing.Size(289, 144);
+            this.menuDV.Size = new System.Drawing.Size(310, 144);
             this.menuDV.TabIndex = 21;
             // 
             // btnTienNuoc
@@ -291,7 +304,7 @@
             this.btnTienNuoc.ForeColor = System.Drawing.Color.Black;
             this.btnTienNuoc.Location = new System.Drawing.Point(0, 94);
             this.btnTienNuoc.Name = "btnTienNuoc";
-            this.btnTienNuoc.Size = new System.Drawing.Size(289, 41);
+            this.btnTienNuoc.Size = new System.Drawing.Size(310, 41);
             this.btnTienNuoc.TabIndex = 9;
             this.btnTienNuoc.Text = "Tiền nước";
             this.btnTienNuoc.Click += new System.EventHandler(this.btnTienNuoc_Click);
@@ -308,7 +321,7 @@
             this.btnTienDien.ForeColor = System.Drawing.Color.Black;
             this.btnTienDien.Location = new System.Drawing.Point(0, 49);
             this.btnTienDien.Name = "btnTienDien";
-            this.btnTienDien.Size = new System.Drawing.Size(289, 45);
+            this.btnTienDien.Size = new System.Drawing.Size(310, 45);
             this.btnTienDien.TabIndex = 8;
             this.btnTienDien.Text = "Tiền điện";
             this.btnTienDien.Click += new System.EventHandler(this.btnTienDien_Click);
@@ -328,7 +341,7 @@
             this.btnQLDichVu.Location = new System.Drawing.Point(0, 0);
             this.btnQLDichVu.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLDichVu.Name = "btnQLDichVu";
-            this.btnQLDichVu.Size = new System.Drawing.Size(289, 49);
+            this.btnQLDichVu.Size = new System.Drawing.Size(310, 49);
             this.btnQLDichVu.TabIndex = 7;
             this.btnQLDichVu.Text = "Quản lý dịch vụ";
             this.btnQLDichVu.TextOffset = new System.Drawing.Point(8, 0);
@@ -343,7 +356,7 @@
             this.menuNhanSu.Dock = System.Windows.Forms.DockStyle.Top;
             this.menuNhanSu.Location = new System.Drawing.Point(0, 177);
             this.menuNhanSu.Name = "menuNhanSu";
-            this.menuNhanSu.Size = new System.Drawing.Size(289, 223);
+            this.menuNhanSu.Size = new System.Drawing.Size(310, 223);
             this.menuNhanSu.TabIndex = 20;
             // 
             // btnQlSV
@@ -358,7 +371,7 @@
             this.btnQlSV.ForeColor = System.Drawing.Color.Black;
             this.btnQlSV.Location = new System.Drawing.Point(0, 151);
             this.btnQlSV.Name = "btnQlSV";
-            this.btnQlSV.Size = new System.Drawing.Size(289, 65);
+            this.btnQlSV.Size = new System.Drawing.Size(310, 65);
             this.btnQlSV.TabIndex = 10;
             this.btnQlSV.Text = "Quản lý sinh viên";
             this.btnQlSV.Click += new System.EventHandler(this.btnQlSV_Click);
@@ -375,7 +388,7 @@
             this.btnLuongNV.ForeColor = System.Drawing.Color.Black;
             this.btnLuongNV.Location = new System.Drawing.Point(0, 104);
             this.btnLuongNV.Name = "btnLuongNV";
-            this.btnLuongNV.Size = new System.Drawing.Size(289, 47);
+            this.btnLuongNV.Size = new System.Drawing.Size(310, 47);
             this.btnLuongNV.TabIndex = 9;
             this.btnLuongNV.Text = "Lương nhân viên";
             this.btnLuongNV.Click += new System.EventHandler(this.btnLuongNV_Click);
@@ -392,7 +405,7 @@
             this.btnQuanLyNhanVien.ForeColor = System.Drawing.Color.Black;
             this.btnQuanLyNhanVien.Location = new System.Drawing.Point(0, 53);
             this.btnQuanLyNhanVien.Name = "btnQuanLyNhanVien";
-            this.btnQuanLyNhanVien.Size = new System.Drawing.Size(289, 51);
+            this.btnQuanLyNhanVien.Size = new System.Drawing.Size(310, 51);
             this.btnQuanLyNhanVien.TabIndex = 8;
             this.btnQuanLyNhanVien.Text = "Quản lý nhân viên";
             this.btnQuanLyNhanVien.Click += new System.EventHandler(this.btnQuanLyNhanVien_Click);
@@ -412,7 +425,7 @@
             this.btnQlNhanSu.Location = new System.Drawing.Point(0, 0);
             this.btnQlNhanSu.Margin = new System.Windows.Forms.Padding(4);
             this.btnQlNhanSu.Name = "btnQlNhanSu";
-            this.btnQlNhanSu.Size = new System.Drawing.Size(289, 53);
+            this.btnQlNhanSu.Size = new System.Drawing.Size(310, 53);
             this.btnQlNhanSu.TabIndex = 7;
             this.btnQlNhanSu.Text = "Quản lý nhân sự";
             this.btnQlNhanSu.TextOffset = new System.Drawing.Point(8, 0);
@@ -424,103 +437,8 @@
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel3.Location = new System.Drawing.Point(0, 131);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(289, 46);
+            this.guna2Panel3.Size = new System.Drawing.Size(310, 46);
             this.guna2Panel3.TabIndex = 11;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.panel3.Controls.Add(this.guna2HtmlLabel45);
-            this.panel3.Controls.Add(this.guna2PictureBox2);
-            this.panel3.Controls.Add(this.guna2PictureBox1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(289, 131);
-            this.panel3.TabIndex = 10;
-            // 
-            // guna2HtmlLabel45
-            // 
-            this.guna2HtmlLabel45.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel45.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel45.ForeColor = System.Drawing.Color.MistyRose;
-            this.guna2HtmlLabel45.Location = new System.Drawing.Point(103, 18);
-            this.guna2HtmlLabel45.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2HtmlLabel45.Name = "guna2HtmlLabel45";
-            this.guna2HtmlLabel45.Size = new System.Drawing.Size(141, 39);
-            this.guna2HtmlLabel45.TabIndex = 7;
-            this.guna2HtmlLabel45.Text = "KÝ TÚC XÁ";
-            // 
-            // timeMenuNhanSu
-            // 
-            this.timeMenuNhanSu.Interval = 10;
-            this.timeMenuNhanSu.Tick += new System.EventHandler(this.timeMenuNhanSu_Tick);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.panelMain);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(310, 57);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1007, 679);
-            this.panel1.TabIndex = 8;
-            // 
-            // panelMain
-            // 
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(0, 67);
-            this.panelMain.Margin = new System.Windows.Forms.Padding(4, 0, 4, 4);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1007, 612);
-            this.panelMain.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.panel2.Controls.Add(this.lblTitle);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.ForeColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1007, 67);
-            this.panel2.TabIndex = 0;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(472, 18);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(107, 32);
-            this.lblTitle.TabIndex = 1;
-            this.lblTitle.Text = "HOME";
-            // 
-            // timeMenuDichVu
-            // 
-            this.timeMenuDichVu.Interval = 10;
-            this.timeMenuDichVu.Tick += new System.EventHandler(this.timeMenuDichVu_Tick);
-            // 
-            // timeMenuCSVC
-            // 
-            this.timeMenuCSVC.Interval = 10;
-            this.timeMenuCSVC.Tick += new System.EventHandler(this.timeMenuCSVC_Tick);
-            // 
-            // guna2PictureBox3
-            // 
-            this.guna2PictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(220)))), ((int)(((byte)(215)))));
-            this.guna2PictureBox3.FillColor = System.Drawing.Color.DimGray;
-            this.guna2PictureBox3.Image = global::QuanLyKyTucXa_main.Properties.Resources.icons8_male_user_30;
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(20, 9);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(38, 45);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox3.TabIndex = 8;
-            this.guna2PictureBox3.TabStop = false;
             // 
             // btnHome
             // 
@@ -538,11 +456,35 @@
             this.btnHome.Location = new System.Drawing.Point(0, 0);
             this.btnHome.Margin = new System.Windows.Forms.Padding(4);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(289, 49);
+            this.btnHome.Size = new System.Drawing.Size(310, 49);
             this.btnHome.TabIndex = 13;
             this.btnHome.Text = "Home";
             this.btnHome.TextOffset = new System.Drawing.Point(8, 0);
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.panel3.Controls.Add(this.guna2HtmlLabel45);
+            this.panel3.Controls.Add(this.guna2PictureBox2);
+            this.panel3.Controls.Add(this.guna2PictureBox1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(310, 131);
+            this.panel3.TabIndex = 10;
+            // 
+            // guna2HtmlLabel45
+            // 
+            this.guna2HtmlLabel45.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel45.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel45.ForeColor = System.Drawing.Color.MistyRose;
+            this.guna2HtmlLabel45.Location = new System.Drawing.Point(103, 18);
+            this.guna2HtmlLabel45.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel45.Name = "guna2HtmlLabel45";
+            this.guna2HtmlLabel45.Size = new System.Drawing.Size(141, 39);
+            this.guna2HtmlLabel45.TabIndex = 7;
+            this.guna2HtmlLabel45.Text = "KÝ TÚC XÁ";
             // 
             // guna2PictureBox2
             // 
@@ -570,11 +512,69 @@
             this.guna2PictureBox1.TabIndex = 1;
             this.guna2PictureBox1.TabStop = false;
             // 
+            // timeMenuNhanSu
+            // 
+            this.timeMenuNhanSu.Interval = 10;
+            this.timeMenuNhanSu.Tick += new System.EventHandler(this.timeMenuNhanSu_Tick);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.panelMain);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(310, 57);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1153, 891);
+            this.panel1.TabIndex = 8;
+            // 
+            // panelMain
+            // 
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Location = new System.Drawing.Point(0, 67);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(4, 0, 4, 4);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(1153, 824);
+            this.panelMain.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.panel2.Controls.Add(this.lblTitle);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.ForeColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1153, 67);
+            this.panel2.TabIndex = 0;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(545, 18);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(107, 32);
+            this.lblTitle.TabIndex = 1;
+            this.lblTitle.Text = "HOME                        ";
+            // 
+            // timeMenuDichVu
+            // 
+            this.timeMenuDichVu.Interval = 10;
+            this.timeMenuDichVu.Tick += new System.EventHandler(this.timeMenuDichVu_Tick);
+            // 
+            // timeMenuCSVC
+            // 
+            this.timeMenuCSVC.Interval = 10;
+            this.timeMenuCSVC.Tick += new System.EventHandler(this.timeMenuCSVC_Tick);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1317, 736);
+            this.ClientSize = new System.Drawing.Size(1463, 948);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2Panel_Top);
             this.Controls.Add(this.guna2Panel1);
@@ -584,6 +584,7 @@
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.guna2Panel_Top.ResumeLayout(false);
             this.guna2Panel_Top.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.menuCSVC.ResumeLayout(false);
             this.menuDV.ResumeLayout(false);
@@ -591,11 +592,10 @@
             this.guna2Panel3.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

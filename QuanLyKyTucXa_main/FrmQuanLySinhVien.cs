@@ -23,7 +23,11 @@ namespace QuanLyKyTucXa_main
 
         private void FrmQuanLySinhVien_Load(object sender, EventArgs e)
         {
-            dgvSinhvien.DataSource = quanLySinhVien_BLL.LayDanhSachSinhVien();
+            dgvSinhVien.DataSource = quanLySinhVien_BLL.LayDanhSachSinhVien();
+
+            BLL_Phong mpBL = new BLL_Phong(); // hoặc dùng lớp BLL tương ứng
+            cbMaphong.DataSource = mpBL.GetMaPhong();
+            cbMaphong.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -45,6 +49,7 @@ namespace QuanLyKyTucXa_main
                     cbGioitinh.Text,
                     dtpNgaysinh.Value.ToString("yyyy-MM-dd"),
                     txtQuequan.Text,
+                    txtEmail.Text,
                     cbKhoa.Text,
                     txtLop.Text,
                     cbLoaiuutien.Text,
@@ -58,7 +63,7 @@ namespace QuanLyKyTucXa_main
                 {
                     MessageBox.Show("Thêm thành công!");
                     // Cập nhật lại DataGridView
-                    dgvSinhvien.DataSource = quanLySinhVien_BLL.LayDanhSachSinhVien();
+                    dgvSinhVien.DataSource = quanLySinhVien_BLL.LayDanhSachSinhVien();
 
                     // Xóa trắng các ô nhập
                     ClearControls();
@@ -77,7 +82,9 @@ namespace QuanLyKyTucXa_main
             cbGioitinh.SelectedIndex = -1;
             dtpNgaysinh.Value = DateTime.Now;
             txtQuequan.Clear();
+            txtEmail.Clear(); // ← THÊM DÒNG NÀY
             cbKhoa.SelectedIndex = -1;
+            cbKhoa.Text = "";
             txtLop.Clear();
             cbLoaiuutien.SelectedIndex = -1;
             cbMaphong.SelectedIndex = -1;
@@ -91,27 +98,28 @@ namespace QuanLyKyTucXa_main
                 if (string.IsNullOrEmpty(txtMasv.Text))
                     throw new Exception("Vui lòng chọn sinh viên cần sửa!");
 
-                // Tạo đối tượng nhân viên
+               
+                // Tạo đối tượng sinh viên với dữ liệu mới
                 SinhVien sv = new SinhVien(
                     txtMasv.Text,
                     txtTensv.Text,
                     cbGioitinh.Text,
                     dtpNgaysinh.Value.ToString("yyyy-MM-dd"),
                     txtQuequan.Text,
+                    txtEmail.Text,
                     cbKhoa.Text,
                     txtLop.Text,
                     cbLoaiuutien.Text,
                     cbMaphong.Text
                 );
 
-                // Gọi BLL để sửa
+                // Gọi BLL cập nhật
                 bool result = quanLySinhVien_BLL.CapNhatSinhVien(sv);
 
                 if (result)
                 {
                     MessageBox.Show("Cập nhật thành công!");
-                    dgvSinhvien.DataSource = quanLySinhVien_BLL.LayDanhSachSinhVien();
-                    // Xóa trắng các ô nhập (tùy chọn)
+                    dgvSinhVien.DataSource = quanLySinhVien_BLL.LayDanhSachSinhVien();
                     ClearControls();
                 }
             }
@@ -144,7 +152,7 @@ namespace QuanLyKyTucXa_main
                 if (result)
                 {
                     MessageBox.Show("Xóa thành công!");
-                    dgvSinhvien.DataSource = quanLySinhVien_BLL.LayDanhSachSinhVien();
+                    dgvSinhVien.DataSource = quanLySinhVien_BLL.LayDanhSachSinhVien();
                     ClearControls();
                 }
             }
@@ -163,7 +171,7 @@ namespace QuanLyKyTucXa_main
                 if (string.IsNullOrEmpty(keyword))
                 {
                     // Nếu ô tìm kiếm trống, load lại toàn bộ danh sách
-                    dgvSinhvien.DataSource = quanLySinhVien_BLL.LayDanhSachSinhVien();
+                    dgvSinhVien.DataSource = quanLySinhVien_BLL.LayDanhSachSinhVien();
                     return;
                 }
 
@@ -182,7 +190,7 @@ namespace QuanLyKyTucXa_main
                 List<SinhVien> ketQua = quanLySinhVien_BLL.TimKiemSinhVien(keyword, kieuTimKiem);
 
                 // Hiển thị kết quả lên DataGridView
-                dgvSinhvien.DataSource = ketQua;
+                dgvSinhVien.DataSource = ketQua;
 
                 if (ketQua.Count == 0)
                     MessageBox.Show("Không tìm thấy sinh viên nào!");
@@ -193,21 +201,41 @@ namespace QuanLyKyTucXa_main
             }
         }
 
-        private void dgvSinhvien_CellClick(object sender, DataGridViewCellEventArgs e)
+        //private void dgvSinhvien_CellClick(object sender, DataGridViewCellEventArgs e)
+        //{
+        //    if (e.RowIndex >= 0)
+        //    {
+        //        DataGridViewRow row = dgvSinhVien.Rows[e.RowIndex];
+        //        txtMasv.Text = row.Cells["masv"].Value.ToString();
+        //        txtTensv.Text = row.Cells["tensv"].Value.ToString();
+        //        cbGioitinh.Text = row.Cells["gioitinh"].Value.ToString();
+        //        dtpNgaysinh.Value = DateTime.Parse(row.Cells["ngaysinh"].Value.ToString());
+        //        txtQuequan.Text = row.Cells["quequan"].Value.ToString();
+        //        cbKhoa.Text = row.Cells["khoa"].Value.ToString();
+        //        txtLop.Text = row.Cells["lop"].Value.ToString();
+        //        cbLoaiuutien.Text = row.Cells["loaiuutien"].Value.ToString();
+        //        cbMaphong.Text = row.Cells["maphong"].Value.ToString();
+
+        //    }
+        //}
+
+        private void dgvSinhVien_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = dgvSinhvien.Rows[e.RowIndex];
+                DataGridViewRow row = dgvSinhVien.Rows[e.RowIndex];
                 txtMasv.Text = row.Cells["masv"].Value.ToString();
+                txtMasv.ReadOnly = true;
                 txtTensv.Text = row.Cells["tensv"].Value.ToString();
                 cbGioitinh.Text = row.Cells["gioitinh"].Value.ToString();
                 dtpNgaysinh.Value = DateTime.Parse(row.Cells["ngaysinh"].Value.ToString());
                 txtQuequan.Text = row.Cells["quequan"].Value.ToString();
+                txtEmail.Text = row.Cells["email"].Value.ToString(); // <- thêm dòng này
                 cbKhoa.Text = row.Cells["khoa"].Value.ToString();
                 txtLop.Text = row.Cells["lop"].Value.ToString();
                 cbLoaiuutien.Text = row.Cells["loaiuutien"].Value.ToString();
-                cbMaphong.Text = row.Cells["maphong"].Value.ToString();
-
+                //cbMaphong.Text = row.Cells["maphong"].Value.ToString();
+                cbMaphong.SelectedItem = row.Cells["maphong"].Value.ToString();
             }
         }
     }

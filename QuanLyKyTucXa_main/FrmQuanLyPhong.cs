@@ -23,7 +23,7 @@ namespace QuanLyKyTucXa_main
             LoadPhongData();
             LoadLoaiPhongComboBox();
             LoadXepLoaiComboBox();
-          //  chatBotControl1.Visible = false;
+            chatBotControl1.Visible = false;
         }
 
         private void LoadDayComboBox()
@@ -201,7 +201,7 @@ namespace QuanLyKyTucXa_main
 
         private void btnToggleChatBot_Click(object sender, EventArgs e)
         {
-            //chatBotControl1.Visible = !chatBotControl1.Visible;
+            chatBotControl1.Visible = !chatBotControl1.Visible;
         }
     }
 }

@@ -78,6 +78,7 @@ namespace QuanLyKyTucXa_main
             this.txtMaphong = new Guna.UI2.WinForms.Guna2TextBox();
             this.checkBox1 = new Guna.UI2.WinForms.Guna2CheckBox();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.chatBotControl1 = new QuanLyKyTucXa_main.ChatBotControl();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhong)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -294,7 +295,7 @@ namespace QuanLyKyTucXa_main
             this.btnToggleChatBot.ForeColor = System.Drawing.SystemColors.Control;
             this.btnToggleChatBot.Image = global::QuanLyKyTucXa_main.Properties.Resources.chat_box;
             this.btnToggleChatBot.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnToggleChatBot.Location = new System.Drawing.Point(990, 670);
+            this.btnToggleChatBot.Location = new System.Drawing.Point(1001, 670);
             this.btnToggleChatBot.Name = "btnToggleChatBot";
             this.btnToggleChatBot.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnToggleChatBot.Size = new System.Drawing.Size(52, 50);
@@ -690,12 +691,22 @@ namespace QuanLyKyTucXa_main
             this.guna2Elipse2.BorderRadius = 30;
             this.guna2Elipse2.TargetControl = this.dgvPhong;
             // 
+            // chatBotControl1
+            // 
+            this.chatBotControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.chatBotControl1.BackColor = System.Drawing.Color.Transparent;
+            this.chatBotControl1.Location = new System.Drawing.Point(793, 319);
+            this.chatBotControl1.Name = "chatBotControl1";
+            this.chatBotControl1.Size = new System.Drawing.Size(260, 345);
+            this.chatBotControl1.TabIndex = 56;
+            // 
             // FrmQuanLyPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(1084, 732);
+            this.Controls.Add(this.chatBotControl1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
@@ -759,6 +770,7 @@ namespace QuanLyKyTucXa_main
         private Guna.UI2.WinForms.Guna2ComboBox cbLoaiphong;
         private Guna.UI2.WinForms.Guna2CheckBox checkBox1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private ChatBotControl chatBotControl1;
         // private ChatBotControl chatBotControl1;
     }
 }

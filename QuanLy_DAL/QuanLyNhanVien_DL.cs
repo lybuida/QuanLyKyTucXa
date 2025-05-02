@@ -13,7 +13,7 @@ namespace QuanLy_DAL
     {
         public List<NhanVien> LayDanhSachNhanVien()
         {
-            string manv, tennv, gioitinh, diachi, ngaysinh, sodienthoai;
+            string manv, tennv, gioitinh, ngaysinh, diachi,  sodienthoai;
             List<NhanVien> nhanViens = new List<NhanVien>();
             string sql = "SELECT * FROM NhanVien";
             try
@@ -25,11 +25,11 @@ namespace QuanLy_DAL
                     manv = reader[0].ToString();
                     tennv = reader[1].ToString();
                     gioitinh = reader[2].ToString();
-                    diachi = reader[3].ToString();
-                    ngaysinh = reader[4].ToString();
+                    ngaysinh = reader[3].ToString();
+                    diachi = reader[4].ToString();
                     sodienthoai = reader[5].ToString();
 
-                    NhanVien nhanVien = new NhanVien(manv, tennv, gioitinh, diachi, ngaysinh, sodienthoai);
+                    NhanVien nhanVien = new NhanVien(manv, tennv, gioitinh, ngaysinh, diachi,  sodienthoai);
                     nhanViens.Add(nhanVien);
                 }
                 reader.Close();

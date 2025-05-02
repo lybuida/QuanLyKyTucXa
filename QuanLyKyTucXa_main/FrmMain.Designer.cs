@@ -456,7 +456,11 @@
             this.btnHome.Location = new System.Drawing.Point(0, 0);
             this.btnHome.Margin = new System.Windows.Forms.Padding(4);
             this.btnHome.Name = "btnHome";
+<<<<<<< HEAD
             this.btnHome.Size = new System.Drawing.Size(310, 49);
+=======
+            this.btnHome.Size = new System.Drawing.Size(289, 49);
+>>>>>>> 670387da5b4b4491a12c062e3745e1508a9f1ae5
             this.btnHome.TabIndex = 13;
             this.btnHome.Text = "Home";
             this.btnHome.TextOffset = new System.Drawing.Point(8, 0);
@@ -471,7 +475,11 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
+<<<<<<< HEAD
             this.panel3.Size = new System.Drawing.Size(310, 131);
+=======
+            this.panel3.Size = new System.Drawing.Size(289, 131);
+>>>>>>> 670387da5b4b4491a12c062e3745e1508a9f1ae5
             this.panel3.TabIndex = 10;
             // 
             // guna2HtmlLabel45
@@ -525,7 +533,11 @@
             this.panel1.Location = new System.Drawing.Point(310, 57);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
+<<<<<<< HEAD
             this.panel1.Size = new System.Drawing.Size(1153, 891);
+=======
+            this.panel1.Size = new System.Drawing.Size(1007, 679);
+>>>>>>> 670387da5b4b4491a12c062e3745e1508a9f1ae5
             this.panel1.TabIndex = 8;
             // 
             // panelMain
@@ -534,7 +546,11 @@
             this.panelMain.Location = new System.Drawing.Point(0, 67);
             this.panelMain.Margin = new System.Windows.Forms.Padding(4, 0, 4, 4);
             this.panelMain.Name = "panelMain";
+<<<<<<< HEAD
             this.panelMain.Size = new System.Drawing.Size(1153, 824);
+=======
+            this.panelMain.Size = new System.Drawing.Size(1007, 612);
+>>>>>>> 670387da5b4b4491a12c062e3745e1508a9f1ae5
             this.panelMain.TabIndex = 1;
             // 
             // panel2
@@ -546,19 +562,33 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 4);
             this.panel2.Name = "panel2";
+<<<<<<< HEAD
             this.panel2.Size = new System.Drawing.Size(1153, 67);
+=======
+            this.panel2.Size = new System.Drawing.Size(1007, 67);
+>>>>>>> 670387da5b4b4491a12c062e3745e1508a9f1ae5
             this.panel2.TabIndex = 0;
             // 
             // lblTitle
             // 
+<<<<<<< HEAD
             this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(545, 18);
+=======
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(472, 18);
+>>>>>>> 670387da5b4b4491a12c062e3745e1508a9f1ae5
             this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(107, 32);
             this.lblTitle.TabIndex = 1;
+<<<<<<< HEAD
             this.lblTitle.Text = "HOME                        ";
+=======
+            this.lblTitle.Text = "HOME";
+>>>>>>> 670387da5b4b4491a12c062e3745e1508a9f1ae5
             // 
             // timeMenuDichVu
             // 

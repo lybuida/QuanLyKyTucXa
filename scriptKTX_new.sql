@@ -96,15 +96,7 @@ CREATE TABLE NhanVien (
     gioitinh NVARCHAR(10),
     ngaysinh DATE,
     diachi NVARCHAR(50),
-    sodienthoai NCHAR(15),
-    luongcoban FLOAT,
-    hesoluong FLOAT,
-    phucap FLOAT,
-    khautru FLOAT,
-    songaycong NCHAR(10),
-    ngaythanhtoan DATE,
-    tongluong FLOAT,
-    trangthai NCHAR(50)
+    sodienthoai NCHAR(15)
 );
 
 -- Bảng LuongNhanVien
@@ -150,8 +142,11 @@ INSERT INTO Day VALUES
 -- Phòng
 INSERT INTO Phong VALUES
 (N'p101', N'Phòng 101', 4, 5, N'Thiếu', N'Nam', N'Thường', N'd1'),
-(N'p102', N'Phòng 102', 3, 3, N'Đủ', N'Nam', N'Vip', N'd1'),
-(N'p103', N'Phòng 103', 3, 5, N'Thiếu', N'Nữ', N'Thường', N'd2');
+(N'p102', N'Phòng 102', 5, 5, N'Đủ', N'Nam', N'Vip', N'd1'),
+(N'p103', N'Phòng 103', 3, 5, N'Thiếu', N'Nữ', N'Thường', N'd2'),
+(N'p104', N'Phòng 104', 1, 5, N'Thiếu', N'Nữ', N'Thường', N'd2'),
+(N'p105', N'Phòng 105', 1, 5, N'Thiếu', N'Nam', N'Thường', N'd2'),
+(N'p106', N'Phòng 106', 1, 5, N'Thiếu', N'Nam', N'Thường', N'd1');
 
 -- Sinh viên
 INSERT INTO SinhVien VALUES

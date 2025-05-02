@@ -17,13 +17,13 @@ namespace QuanLyKyTucXa_main
         //Fields
         private Button currentButton;
         private Form activeForm = null;
-        private NguoiDung nguoiDung;
+       
 
 
-        public FrmMainMenu(NguoiDung user)
+        public FrmMainMenu()
         {
             InitializeComponent();
-            this.nguoiDung = user;
+            
 
             customizeDesign();           
         }
@@ -141,8 +141,8 @@ namespace QuanLyKyTucXa_main
  //QLSV
         private void btnSinhvien_Click_1(object sender, EventArgs e)
         {
-            ActivateButton(sender, 255, 152, 0);
-            openChildForm(new FrmQuanLySinhVien(), new Size(180, 26), new Point(325, 15));
+            //ActivateButton(sender, 255, 152, 0);
+            //openChildForm(new FrmQuanLySinhVien(), new Size(180, 26), new Point(325, 15));
         }       
 
 //danhmuc

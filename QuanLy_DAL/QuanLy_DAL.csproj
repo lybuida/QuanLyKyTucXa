@@ -57,6 +57,7 @@
     <Compile Include="SinhVienDangKy_DL.cs" />
     <Compile Include="ThanhToanLuongNhanVien_DL.cs" />
     <Compile Include="ThongBaoGmail_DL.cs" />
+    <Compile Include="ThongKeLuongNuoc_DL.cs" />
     <Compile Include="ThongKeTienDien_DL.cs" />
   </ItemGroup>
   <ItemGroup>

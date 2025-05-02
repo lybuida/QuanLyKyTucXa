@@ -39,7 +39,7 @@ namespace QuanLyKyTucXa_main
             if (nguoiDung != null)
             {
                 this.Hide();
-                FrmMainMenu frmMainMenu = new FrmMainMenu();
+                FrmMain frmMainMenu = new FrmMain();
                 frmMainMenu.ShowDialog();
 
                 this.Close();

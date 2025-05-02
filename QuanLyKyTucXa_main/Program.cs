@@ -18,7 +18,7 @@ namespace QuanLyKyTucXa_main
             Application.SetCompatibleTextRenderingDefault(false);
           //  Application.Run(new FrmDangNhap());
 
-            Application.Run(new FrmQuanLyPhong());
+            Application.Run(new FrmDangNhap());
 
         }
     }

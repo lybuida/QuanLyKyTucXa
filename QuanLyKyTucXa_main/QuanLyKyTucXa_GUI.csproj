@@ -195,9 +195,7 @@
     <Compile Include="FrmThongKeTienDien.Designer.cs">
       <DependentUpon>FrmThongKeTienDien.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmQuanLySinhVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="FrmQuanLySinhVien.cs" />
     <Compile Include="FrmQuanLySinhVien.Designer.cs">
       <DependentUpon>FrmQuanLySinhVien.cs</DependentUpon>
     </Compile>

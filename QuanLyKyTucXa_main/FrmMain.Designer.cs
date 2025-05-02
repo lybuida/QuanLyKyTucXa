@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Panel_Top = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,7 +52,6 @@
             this.btnQuanLyNhanVien = new Guna.UI2.WinForms.Guna2Button();
             this.btnQlNhanSu = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel45 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.timeMenuNhanSu = new System.Windows.Forms.Timer(this.components);
@@ -64,6 +62,7 @@
             this.timeMenuDichVu = new System.Windows.Forms.Timer(this.components);
             this.timeMenuCSVC = new System.Windows.Forms.Timer(this.components);
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel_Top.SuspendLayout();
@@ -92,27 +91,6 @@
             this.guna2ControlBox3.Size = new System.Drawing.Size(55, 38);
             this.guna2ControlBox3.TabIndex = 2;
             // 
-            // guna2TextBox2
-            // 
-            this.guna2TextBox2.AutoRoundedCorners = true;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(477, 12);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PlaceholderText = "Tìm Kiếm";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(225, 37);
-            this.guna2TextBox2.TabIndex = 4;
-            this.guna2TextBox2.TextOffset = new System.Drawing.Point(5, 0);
-            // 
             // guna2DragControl1
             // 
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
@@ -124,11 +102,11 @@
             this.guna2Panel_Top.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel_Top.Controls.Add(this.label1);
             this.guna2Panel_Top.Controls.Add(this.guna2ControlBox3);
-            this.guna2Panel_Top.Controls.Add(this.guna2TextBox2);
             this.guna2Panel_Top.Controls.Add(this.guna2ControlBox2);
             this.guna2Panel_Top.Controls.Add(this.guna2ControlBox1);
             this.guna2Panel_Top.Controls.Add(this.guna2PictureBox3);
             this.guna2Panel_Top.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel_Top.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(220)))), ((int)(((byte)(215)))));
             this.guna2Panel_Top.Location = new System.Drawing.Point(310, 0);
             this.guna2Panel_Top.Name = "guna2Panel_Top";
             this.guna2Panel_Top.Size = new System.Drawing.Size(1007, 57);
@@ -138,7 +116,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(220)))), ((int)(((byte)(215)))));
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(64, 18);
             this.label1.Name = "label1";
@@ -179,7 +157,7 @@
             this.guna2Panel1.Controls.Add(this.guna2Panel3);
             this.guna2Panel1.Controls.Add(this.panel3);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2Panel1.FillColor = System.Drawing.Color.White;
+            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(310, 736);
@@ -189,7 +167,7 @@
             // 
             this.btnKyLuat.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 8);
             this.btnKyLuat.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnKyLuat.FillColor = System.Drawing.Color.Transparent;
+            this.btnKyLuat.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.btnKyLuat.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKyLuat.ForeColor = System.Drawing.Color.Black;
             this.btnKyLuat.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(220)))), ((int)(((byte)(215)))));
@@ -197,10 +175,10 @@
             this.btnKyLuat.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnKyLuat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnKyLuat.ImageOffset = new System.Drawing.Point(8, 0);
-            this.btnKyLuat.Location = new System.Drawing.Point(0, 324);
+            this.btnKyLuat.Location = new System.Drawing.Point(0, 735);
             this.btnKyLuat.Margin = new System.Windows.Forms.Padding(4);
             this.btnKyLuat.Name = "btnKyLuat";
-            this.btnKyLuat.Size = new System.Drawing.Size(310, 49);
+            this.btnKyLuat.Size = new System.Drawing.Size(289, 44);
             this.btnKyLuat.TabIndex = 23;
             this.btnKyLuat.Text = "Quản lý kỷ luật";
             this.btnKyLuat.TextOffset = new System.Drawing.Point(8, 0);
@@ -213,9 +191,9 @@
             this.menuCSVC.Controls.Add(this.btnDay);
             this.menuCSVC.Controls.Add(this.btnQlCSVC);
             this.menuCSVC.Dock = System.Windows.Forms.DockStyle.Top;
-            this.menuCSVC.Location = new System.Drawing.Point(0, 275);
+            this.menuCSVC.Location = new System.Drawing.Point(0, 544);
             this.menuCSVC.Name = "menuCSVC";
-            this.menuCSVC.Size = new System.Drawing.Size(310, 49);
+            this.menuCSVC.Size = new System.Drawing.Size(289, 191);
             this.menuCSVC.TabIndex = 22;
             // 
             // btnThietBi
@@ -228,9 +206,9 @@
             this.btnThietBi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(220)))), ((int)(((byte)(215)))));
             this.btnThietBi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnThietBi.ForeColor = System.Drawing.Color.Black;
-            this.btnThietBi.Location = new System.Drawing.Point(0, 139);
+            this.btnThietBi.Location = new System.Drawing.Point(0, 138);
             this.btnThietBi.Name = "btnThietBi";
-            this.btnThietBi.Size = new System.Drawing.Size(310, 46);
+            this.btnThietBi.Size = new System.Drawing.Size(289, 47);
             this.btnThietBi.TabIndex = 10;
             this.btnThietBi.Text = "Thiết bị";
             this.btnThietBi.Click += new System.EventHandler(this.btnThietBi_Click);
@@ -247,7 +225,7 @@
             this.btnPhong.ForeColor = System.Drawing.Color.Black;
             this.btnPhong.Location = new System.Drawing.Point(0, 94);
             this.btnPhong.Name = "btnPhong";
-            this.btnPhong.Size = new System.Drawing.Size(310, 45);
+            this.btnPhong.Size = new System.Drawing.Size(289, 44);
             this.btnPhong.TabIndex = 9;
             this.btnPhong.Text = "Phòng";
             this.btnPhong.Click += new System.EventHandler(this.btnPhong_Click);
@@ -264,7 +242,7 @@
             this.btnDay.ForeColor = System.Drawing.Color.Black;
             this.btnDay.Location = new System.Drawing.Point(0, 49);
             this.btnDay.Name = "btnDay";
-            this.btnDay.Size = new System.Drawing.Size(310, 45);
+            this.btnDay.Size = new System.Drawing.Size(289, 45);
             this.btnDay.TabIndex = 8;
             this.btnDay.Text = "Dãy phòng";
             this.btnDay.Click += new System.EventHandler(this.btnDay_Click);
@@ -273,7 +251,7 @@
             // 
             this.btnQlCSVC.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 8);
             this.btnQlCSVC.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnQlCSVC.FillColor = System.Drawing.Color.Transparent;
+            this.btnQlCSVC.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.btnQlCSVC.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQlCSVC.ForeColor = System.Drawing.Color.Black;
             this.btnQlCSVC.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
@@ -284,7 +262,7 @@
             this.btnQlCSVC.Location = new System.Drawing.Point(0, 0);
             this.btnQlCSVC.Margin = new System.Windows.Forms.Padding(4);
             this.btnQlCSVC.Name = "btnQlCSVC";
-            this.btnQlCSVC.Size = new System.Drawing.Size(310, 49);
+            this.btnQlCSVC.Size = new System.Drawing.Size(289, 49);
             this.btnQlCSVC.TabIndex = 7;
             this.btnQlCSVC.Text = "Quản lý cơ sở vật chất";
             this.btnQlCSVC.TextOffset = new System.Drawing.Point(8, 0);
@@ -296,9 +274,9 @@
             this.menuDV.Controls.Add(this.btnTienDien);
             this.menuDV.Controls.Add(this.btnQLDichVu);
             this.menuDV.Dock = System.Windows.Forms.DockStyle.Top;
-            this.menuDV.Location = new System.Drawing.Point(0, 226);
+            this.menuDV.Location = new System.Drawing.Point(0, 400);
             this.menuDV.Name = "menuDV";
-            this.menuDV.Size = new System.Drawing.Size(310, 49);
+            this.menuDV.Size = new System.Drawing.Size(289, 144);
             this.menuDV.TabIndex = 21;
             // 
             // btnTienNuoc
@@ -313,7 +291,7 @@
             this.btnTienNuoc.ForeColor = System.Drawing.Color.Black;
             this.btnTienNuoc.Location = new System.Drawing.Point(0, 94);
             this.btnTienNuoc.Name = "btnTienNuoc";
-            this.btnTienNuoc.Size = new System.Drawing.Size(310, 41);
+            this.btnTienNuoc.Size = new System.Drawing.Size(289, 41);
             this.btnTienNuoc.TabIndex = 9;
             this.btnTienNuoc.Text = "Tiền nước";
             this.btnTienNuoc.Click += new System.EventHandler(this.btnTienNuoc_Click);
@@ -330,7 +308,7 @@
             this.btnTienDien.ForeColor = System.Drawing.Color.Black;
             this.btnTienDien.Location = new System.Drawing.Point(0, 49);
             this.btnTienDien.Name = "btnTienDien";
-            this.btnTienDien.Size = new System.Drawing.Size(310, 45);
+            this.btnTienDien.Size = new System.Drawing.Size(289, 45);
             this.btnTienDien.TabIndex = 8;
             this.btnTienDien.Text = "Tiền điện";
             this.btnTienDien.Click += new System.EventHandler(this.btnTienDien_Click);
@@ -339,7 +317,7 @@
             // 
             this.btnQLDichVu.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 8);
             this.btnQLDichVu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnQLDichVu.FillColor = System.Drawing.Color.Transparent;
+            this.btnQLDichVu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.btnQLDichVu.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLDichVu.ForeColor = System.Drawing.Color.Black;
             this.btnQLDichVu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
@@ -350,7 +328,7 @@
             this.btnQLDichVu.Location = new System.Drawing.Point(0, 0);
             this.btnQLDichVu.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLDichVu.Name = "btnQLDichVu";
-            this.btnQLDichVu.Size = new System.Drawing.Size(310, 49);
+            this.btnQLDichVu.Size = new System.Drawing.Size(289, 49);
             this.btnQLDichVu.TabIndex = 7;
             this.btnQLDichVu.Text = "Quản lý dịch vụ";
             this.btnQLDichVu.TextOffset = new System.Drawing.Point(8, 0);
@@ -365,7 +343,7 @@
             this.menuNhanSu.Dock = System.Windows.Forms.DockStyle.Top;
             this.menuNhanSu.Location = new System.Drawing.Point(0, 177);
             this.menuNhanSu.Name = "menuNhanSu";
-            this.menuNhanSu.Size = new System.Drawing.Size(310, 49);
+            this.menuNhanSu.Size = new System.Drawing.Size(289, 223);
             this.menuNhanSu.TabIndex = 20;
             // 
             // btnQlSV
@@ -380,7 +358,7 @@
             this.btnQlSV.ForeColor = System.Drawing.Color.Black;
             this.btnQlSV.Location = new System.Drawing.Point(0, 151);
             this.btnQlSV.Name = "btnQlSV";
-            this.btnQlSV.Size = new System.Drawing.Size(310, 46);
+            this.btnQlSV.Size = new System.Drawing.Size(289, 65);
             this.btnQlSV.TabIndex = 10;
             this.btnQlSV.Text = "Quản lý sinh viên";
             this.btnQlSV.Click += new System.EventHandler(this.btnQlSV_Click);
@@ -397,7 +375,7 @@
             this.btnLuongNV.ForeColor = System.Drawing.Color.Black;
             this.btnLuongNV.Location = new System.Drawing.Point(0, 104);
             this.btnLuongNV.Name = "btnLuongNV";
-            this.btnLuongNV.Size = new System.Drawing.Size(310, 47);
+            this.btnLuongNV.Size = new System.Drawing.Size(289, 47);
             this.btnLuongNV.TabIndex = 9;
             this.btnLuongNV.Text = "Lương nhân viên";
             this.btnLuongNV.Click += new System.EventHandler(this.btnLuongNV_Click);
@@ -414,7 +392,7 @@
             this.btnQuanLyNhanVien.ForeColor = System.Drawing.Color.Black;
             this.btnQuanLyNhanVien.Location = new System.Drawing.Point(0, 53);
             this.btnQuanLyNhanVien.Name = "btnQuanLyNhanVien";
-            this.btnQuanLyNhanVien.Size = new System.Drawing.Size(310, 51);
+            this.btnQuanLyNhanVien.Size = new System.Drawing.Size(289, 51);
             this.btnQuanLyNhanVien.TabIndex = 8;
             this.btnQuanLyNhanVien.Text = "Quản lý nhân viên";
             this.btnQuanLyNhanVien.Click += new System.EventHandler(this.btnQuanLyNhanVien_Click);
@@ -423,7 +401,7 @@
             // 
             this.btnQlNhanSu.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 8);
             this.btnQlNhanSu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnQlNhanSu.FillColor = System.Drawing.Color.Transparent;
+            this.btnQlNhanSu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.btnQlNhanSu.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQlNhanSu.ForeColor = System.Drawing.Color.Black;
             this.btnQlNhanSu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
@@ -434,7 +412,7 @@
             this.btnQlNhanSu.Location = new System.Drawing.Point(0, 0);
             this.btnQlNhanSu.Margin = new System.Windows.Forms.Padding(4);
             this.btnQlNhanSu.Name = "btnQlNhanSu";
-            this.btnQlNhanSu.Size = new System.Drawing.Size(310, 53);
+            this.btnQlNhanSu.Size = new System.Drawing.Size(289, 53);
             this.btnQlNhanSu.TabIndex = 7;
             this.btnQlNhanSu.Text = "Quản lý nhân sự";
             this.btnQlNhanSu.TextOffset = new System.Drawing.Point(8, 0);
@@ -446,47 +424,26 @@
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel3.Location = new System.Drawing.Point(0, 131);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(310, 46);
+            this.guna2Panel3.Size = new System.Drawing.Size(289, 46);
             this.guna2Panel3.TabIndex = 11;
-            // 
-            // btnHome
-            // 
-            this.btnHome.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 8);
-            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHome.FillColor = System.Drawing.Color.Transparent;
-            this.btnHome.Font = new System.Drawing.Font("Bahnschrift", 9F);
-            this.btnHome.ForeColor = System.Drawing.Color.Black;
-            this.btnHome.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(220)))), ((int)(((byte)(215)))));
-            this.btnHome.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.btnHome.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHome.ImageOffset = new System.Drawing.Point(8, 0);
-            this.btnHome.Location = new System.Drawing.Point(0, 0);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(4);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(310, 49);
-            this.btnHome.TabIndex = 13;
-            this.btnHome.Text = "Home";
-            this.btnHome.TextOffset = new System.Drawing.Point(8, 0);
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // panel3
             // 
-            this.panel3.AutoScroll = true;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.panel3.Controls.Add(this.guna2HtmlLabel45);
             this.panel3.Controls.Add(this.guna2PictureBox2);
             this.panel3.Controls.Add(this.guna2PictureBox1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(310, 131);
+            this.panel3.Size = new System.Drawing.Size(289, 131);
             this.panel3.TabIndex = 10;
             // 
             // guna2HtmlLabel45
             // 
             this.guna2HtmlLabel45.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel45.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel45.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.guna2HtmlLabel45.ForeColor = System.Drawing.Color.MistyRose;
             this.guna2HtmlLabel45.Location = new System.Drawing.Point(103, 18);
             this.guna2HtmlLabel45.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel45.Name = "guna2HtmlLabel45";
@@ -554,24 +511,46 @@
             // 
             // guna2PictureBox3
             // 
-            this.guna2PictureBox3.BackColor = System.Drawing.SystemColors.Control;
+            this.guna2PictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(220)))), ((int)(((byte)(215)))));
             this.guna2PictureBox3.FillColor = System.Drawing.Color.DimGray;
             this.guna2PictureBox3.Image = global::QuanLyKyTucXa_main.Properties.Resources.icons8_male_user_30;
             this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(20, 5);
+            this.guna2PictureBox3.Location = new System.Drawing.Point(20, 9);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
             this.guna2PictureBox3.Size = new System.Drawing.Size(38, 45);
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox3.TabIndex = 8;
             this.guna2PictureBox3.TabStop = false;
             // 
+            // btnHome
+            // 
+            this.btnHome.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 8);
+            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHome.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(220)))), ((int)(((byte)(215)))));
+            this.btnHome.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.btnHome.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnHome.Image = global::QuanLyKyTucXa_main.Properties.Resources.icons8_home_26__1_;
+            this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnHome.ImageOffset = new System.Drawing.Point(8, 0);
+            this.btnHome.Location = new System.Drawing.Point(0, 0);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(289, 49);
+            this.btnHome.TabIndex = 13;
+            this.btnHome.Text = "Home";
+            this.btnHome.TextOffset = new System.Drawing.Point(8, 0);
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
             // guna2PictureBox2
             // 
-            this.guna2PictureBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.guna2PictureBox2.FillColor = System.Drawing.Color.Gray;
             this.guna2PictureBox2.Image = global::QuanLyKyTucXa_main.Properties.Resources.icons8_menu_25;
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(267, 96);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(250, 96);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.Size = new System.Drawing.Size(36, 28);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -580,7 +559,7 @@
             // 
             // guna2PictureBox1
             // 
-            this.guna2PictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.guna2PictureBox1.FillColor = System.Drawing.Color.DimGray;
             this.guna2PictureBox1.Image = global::QuanLyKyTucXa_main.Properties.Resources.ktx;
             this.guna2PictureBox1.ImageRotate = 0F;
@@ -623,7 +602,6 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel_Top;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
